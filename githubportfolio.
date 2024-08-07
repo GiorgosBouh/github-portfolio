@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Georgios Bouchouras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+        .contact-info, .education, .work-experience, .skills, .publications, .presentations, .annexes {
+            margin-bottom: 20px;
+        }
+        .contact-info ul, .education ul, .work-experience ul, .skills ul, .publications ul, .presentations ul, .annexes ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info ul li, .education ul li, .work-experience ul li, .skills ul li, .publications ul li, .presentations ul li, .annexes ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Curriculum Vitae</h1>
+        <h2>Georgios Bouchouras</h2>
+
+        <div class="contact-info">
+            <h3>Personal Information</h3>
+            <ul>
+                <li><strong>Address:</strong> 149, Vasilissis Olgas, Thessaloniki, 54645, Greece</li>
+                <li><strong>Phone:</strong> +30 2310 992674, +30 6974 214092</li>
+                <li><strong>Email:</strong> <a href="mailto:bouhouras@yahoo.com">bouhouras@yahoo.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://gr.linkedin.com/pub/giorgos-bouchouras/65/931/52b">Profile</a></li>
+                <li><strong>iMessage & Skype:</strong> bouhouras@yahoo.com</li>
+                <li><strong>Sex:</strong> Male</li>
+                <li><strong>Date of Birth:</strong> 12/06/1979</li>
+                <li><strong>Nationality:</strong> Greek</li>
+            </ul>
+        </div>
+
+        <div class="education">
+            <h3>Education and Training</h3>
+            <ul>
+                <li><strong>2023-now:</strong> Master of Science (c) in Intelligent Computer Systems, Aegean University, Thesis: Large Language Models and Ontology Engineering: Advancing Parkinson Disease Monitoring Systems</li>
+                <li><strong>2013-2014:</strong> Postdoctoral researcher, Aristotle University of Thessaloniki, Dissertation: "Kinematics and knee muscle activation during sit to stand movement in women with knee osteoarthritis", Excellence Scholarship</li>
+                <li><strong>2008-2013:</strong> Doctoral Degree in Biomechanics, Aristotle University Of Thessaloniki, Dissertation: "Biomechanical analysis of gait and turning on trainees after anterior cruciate ligament reconstruction"</li>
+                <li><strong>2003-2006:</strong> Master of Science Degree in Biomechanics, Aristotle University Of Thessaloniki, Thesis: "Angular momentum and landing efficiency in the long jump"</li>
+                <li><strong>1998-2002:</strong> Bachelor degree in Physical Education and Sport Science, Aristotle University Of Thessaloniki, Thesis: "Methods to improve joints range of motion in elite soccer players"</li>
+            </ul>
+        </div>
+
+        <div class="work-experience">
+            <h3>Work Experience</h3>
+            <ul>
+                <li><strong>2022-2024:</strong> Author, Specialty Course Author in the field of Physical Education, Greek higher State School for Vocational Training</li>
+                <li><strong>2022-2024:</strong> Physical Education Teacher, Primary Education of Eastern Thessaloniki, 5th and 6th Primary School of Kalamaria</li>
+                <li><strong>2021-2022:</strong> Physical Education Teacher, Secondary Education of Eastern Thessaloniki, Panorama High School</li>
+                <li><strong>2020-2021:</strong> Physical Education Teacher, Primary Education of East Attica, 1st Primary School of Thrakomakedones</li>
+                <li><strong>2021:</strong> Educator, Greek Ministry of Education, Sports and Religious Affairs, University of Western Macedonia</li>
+                <li><strong>2019-2024:</strong> Professor, Metropolitan College, Courses: Introduction to Research Methods, Independent Research Project, Essential Skills for Sport, Introduction to Academic Enquiry and Study Skills, Functional Recovery From Stroke, Disability, Global And Individual Perspective, Physiological Bases To Musculoskeletal And Neurological Rehabilitation, Gait Posture And Balance, Statistics, Research Design</li>
+                <li><strong>2021:</strong> Professor, IDEF Greek-French College, Sorbonne University Paris Nord, Courses: Sports Physiotherapy, Information Technology</li>
+                <li><strong>2021:</strong> Professor, Aegean College, St Marys University, Courses: Biomechanics</li>
+                <li><strong>2019-2020:</strong> Biomechanist, Hellenic Society for the Protection and Rehabilitation of Disabled Persons (ELEPAP)</li>
+                <li><strong>2015-2019:</strong> Physical Education Teacher, Aristotle University Gymnasium</li>
+                <li><strong>2020:</strong> Physical Education Teacher, Primary Education of Eastern Thessaloniki</li>
+                <li><strong>2005-2021:</strong> Professor, Aristotle University of Thessaloniki</li>
+                <li><strong>2006-2007:</strong> Ministry of Employment and Social Protection, Manpower Employment Agency</li>
+                <li><strong>2004:</strong> Installation Services Team Leader, 28th Olympic Games, Athens 2004</li>
+                <li><strong>2003:</strong> Physical Education Teacher, General Secretariat of the Olympic Games, HELEXPO-Hellenic Exhibitions S.A.</li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>Three-dimensional kinematics and analysis systems (Vicon Nexus, BTS Elite, Kistler, Bertec Forceplates)</li>
+                <li>Telemetric electromyograph (Noraxon)</li>
+                <li>Isokinetic dynamometer (Cybex)</li>
+                <li>Editor Reviewer in Scientific Journals ("Frontiers in Sports and Active Living")</li>
+                <li>Reviewer in Scientific Journals (Medicine Science Monitor, Plos one, Journal Of Biomechanics)</li>
+                <li>Languages: Greek (Mother tongue), English (C2)</li>
+                <li>Computer Skills and IT: ECDL Profile Certificate (Web Browsing and Communications, Spreadsheets, Word Processing), LLMs (Llama2, ChatGpt 4, Bard, Ontogpt), Ontology Engineer (Protege, Oops), Matlab, Python, Adobe Photoshop & Premiere, SPSS, Joomla, Drupal, Wordpress</li>
+            </ul>
+        </div>
+
+        <div class="publications">
+            <h3>Publications</h3>
+            <ul>
+                <li>Bouchouras G., Sofianidis G., Patsika G., Hatzitaki V., Kellis E. (2019). Women with knee osteoarthritis increase knee muscle co-contraction to perform stand to sit. Aging Clinical and Experimental Research (https://doi.org/10.1007/s40520-019-01245-z)</li>
+                <li>Bouchouras G., Patsika G., Hatzitaki V., Kellis E. (2015) Kinematics and knee muscle activation during sit-to-stand movement in women with knee osteoarthritis. Clin Biomech. Jul;30(6):599-607</li>
+                <li>Bouchouras G., A., Tsiokanos, E., Sykaras, & A., Mylonas (2015) Ground Reaction Forces and Stair Descent on ACL Reconstructed Trained Subjects. Inquiries in Sport and Physical Education, 13 (1)</li>
+                <li>Papacharisis V., Bouchouras G., Dimou K., Kellis S. (2012). The Sport Academies program in the Aristotle University of Thessaloniki: parental perceptions of quality of service. Hellenic Journal of Physical Education & Sports Science, 36 (1), 45-49</li>
+                <li>Bouchouras G., Moscha D., Papaiakovou G., Nikodelis T., Kollias I. (2009) Angular momentum and landing efficiency in the long jump. European Journal of Sports Science. 9(1): 53-59.</li>
+                <li>Bouchouras G., Chatzistathis T., Nikodelis T., Kantzidou G., Papaiakovou G. (2008). Investigation of the error in the digitization process of the hidden anatomical points during bilateral 2d-DLT kinematic analysis using one video camera. Exercise and Society, vol 47,114-120.</li>
+            </ul>
+        </div>
+
+        <div class="presentations">
+            <h3>Presentations</h3>
+            <ul>
+                <li>Bouchouras G., Markos D., Sykaras E., Tsiokanos A., Mylonas A. (2011). Lower body joints loading during gait. International Congress of the National Union Of Physical Education Teachers, June 2011, Athens</li>
+                <li>Bouchouras G., Samoladas E., Dimou K., Papacharisis V. (2009). Injuries during the Student Football Championship of Aristotle University of Thessaloniki. 12th National Congress of Physical Education & Sport, Thessaloniki 3-5 April 2009.</li>
+                <li>Bouchouras G., Dimou K., Papacharisis V. (2009). Level of satisfaction of participants in the 8th World University Wrestling Championship. 12th National Congress of Physical Education & Sport, Thessaloniki 3-5 April 2009</li>
+                <li>Panoutsakopoulou B., Tampakis K., Bouchouras G., Papaiakovou C., Adhesive. (2007). Kinematic differences between male and female students on jumping length during the National Schools championship. 10th National Congress of Physical Education and Sport, Thessaloniki.</li>
+                <li>Papacharisis B., Bouchouras G., Dimou K. (2007). Internal motivation and student participation students before and after the 5th Universiade of sports. 10th National Congress of Physical Education and Sport, Thessaloniki.</li>
+                <li>Bouchouras G., Mosca D., Nikodelis T., Kollias I., (2005). Investigation of the error in the digitization process of the hidden anatomical points during bilateral 2d-DLT kinematic analysis using one video camera. 13th Congress of Physical Education & Sport, Komotini</li>
+                <li>Bouchouras G., Sykaras E., Mylonas A., Kitsios A., Ampatzidis G. (2002).Warm up effect on joints range of motion of elite soccer players. 1st National Congress of Therapeutic Gymnastics, Thessaloniki</li>
+                <li>Bouchouras G., Dringopoulos E., Sykaras E. (2002).Warm up and distance jumping of elite soccer players. 11th Congress of Physical Education & Sport, Komotini.</li>
+            </ul>
+        </div>
+
+        <div class="annexes">
+            <h3>Annexes</h3>
+            <ul>
+                <li>2009, the 12th National Congress of Physical Education and Sports. Union of Physical Education Teachers of Northern Greece, Thessaloniki 3-5 / 4/09</li>
+                <li>2009, Seminar - Workshop, "Learning for obesity" Aristotle University of Thessaloniki</li>
+                <li>Attendance in more than 20 conferences about physical education and sports</li>
+                <li>International Autumn School on Movement Science and BSMS held in Berlin, Germany, from the 7th to the 11th of October 2019. Humboldt University of Berlin, Germany</li>
+                <li>International Autumn School on Movement Science and BSMS held in Berlin, Germany, from the 13th to the 24th of October 2014. Humboldt University of Berlin, Germany</li>
+                <li>Training Seminar in special education "Promoting Equal Participation of disabled kids in Education". Organizer: Aristotle University of Thessaloniki. Duration: 400 hours. Approval Pedagogical Institute, General Studies IP & Patent, Directorate of Special Education and Ministry of Education (art. No. 3016 / 09.21.09). Department of Special Education (Doc. Ref. Grade advance. 116 863 / C6 / 23.09.2009</li>
+                <li>Projects: Gait analysis in children, adults and the elderly. Project currently running. Motor Control and Learning Laboratory, Aristotle University of Thessaloniki Research Committee</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
