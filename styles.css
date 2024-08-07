@@ -32,8 +32,6 @@ header h1 {
 
 nav {
     margin-bottom: 20px;
-    background-color: #0073e6;
-    padding: 10px;
 }
 
 nav ul {
@@ -42,26 +40,22 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    background-color: #0073e6;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 15px 20px;
     display: block;
 }
 
 nav ul li a:hover {
     background-color: #005bb5;
-    border-radius: 5px;
-}
-
-section {
-    margin-bottom: 20px;
 }
 
 section h2 {
@@ -83,4 +77,5 @@ a {
     color: #0073e6;
     text-decoration: none;
 }
+
 
