@@ -3,42 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Georgios Bouchouras</title>
+    <title>Georgios Bouchouras - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 80%;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h1, h2, h3 {
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
+            color: #0073e6;
+            margin-bottom: 10px;
         }
-        .contact-info, .education, .work-experience, .skills, .publications, .presentations, .annexes {
+        .section {
             margin-bottom: 20px;
         }
-        .contact-info ul, .education ul, .work-experience ul, .skills ul, .publications ul, .presentations ul, .annexes ul {
+        .section-title {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+        }
+        ul {
             list-style: none;
             padding: 0;
         }
-        .contact-info ul li, .education ul li, .work-experience ul li, .skills ul li, .publications ul li, .presentations ul li, .annexes ul li {
+        ul li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .contact-info li, .education li, .work-experience li, .skills li, .publications li, .presentations li, .annexes li {
             margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Curriculum Vitae</h1>
-        <h2>Georgios Bouchouras</h2>
+        <h1>Georgios Bouchouras</h1>
 
-        <div class="contact-info">
-            <h3>Personal Information</h3>
+        <div class="section contact-info">
+            <h2 class="section-title">Contact Information</h2>
             <ul>
                 <li><strong>Address:</strong> 149, Vasilissis Olgas, Thessaloniki, 54645, Greece</li>
                 <li><strong>Phone:</strong> +30 2310 992674, +30 6974 214092</li>
@@ -51,8 +64,8 @@
             </ul>
         </div>
 
-        <div class="education">
-            <h3>Education and Training</h3>
+        <div class="section education">
+            <h2 class="section-title">Education and Training</h2>
             <ul>
                 <li><strong>2023-now:</strong> Master of Science (c) in Intelligent Computer Systems, Aegean University, Thesis: Large Language Models and Ontology Engineering: Advancing Parkinson Disease Monitoring Systems</li>
                 <li><strong>2013-2014:</strong> Postdoctoral researcher, Aristotle University of Thessaloniki, Dissertation: "Kinematics and knee muscle activation during sit to stand movement in women with knee osteoarthritis", Excellence Scholarship</li>
@@ -62,8 +75,8 @@
             </ul>
         </div>
 
-        <div class="work-experience">
-            <h3>Work Experience</h3>
+        <div class="section work-experience">
+            <h2 class="section-title">Work Experience</h2>
             <ul>
                 <li><strong>2022-2024:</strong> Author, Specialty Course Author in the field of Physical Education, Greek higher State School for Vocational Training</li>
                 <li><strong>2022-2024:</strong> Physical Education Teacher, Primary Education of Eastern Thessaloniki, 5th and 6th Primary School of Kalamaria</li>
@@ -83,8 +96,8 @@
             </ul>
         </div>
 
-        <div class="skills">
-            <h3>Skills</h3>
+        <div class="section skills">
+            <h2 class="section-title">Skills</h2>
             <ul>
                 <li>Three-dimensional kinematics and analysis systems (Vicon Nexus, BTS Elite, Kistler, Bertec Forceplates)</li>
                 <li>Telemetric electromyograph (Noraxon)</li>
@@ -96,8 +109,8 @@
             </ul>
         </div>
 
-        <div class="publications">
-            <h3>Publications</h3>
+        <div class="section publications">
+            <h2 class="section-title">Publications</h2>
             <ul>
                 <li>Bouchouras G., Sofianidis G., Patsika G., Hatzitaki V., Kellis E. (2019). Women with knee osteoarthritis increase knee muscle co-contraction to perform stand to sit. Aging Clinical and Experimental Research (https://doi.org/10.1007/s40520-019-01245-z)</li>
                 <li>Bouchouras G., Patsika G., Hatzitaki V., Kellis E. (2015) Kinematics and knee muscle activation during sit-to-stand movement in women with knee osteoarthritis. Clin Biomech. Jul;30(6):599-607</li>
@@ -108,8 +121,8 @@
             </ul>
         </div>
 
-        <div class="presentations">
-            <h3>Presentations</h3>
+        <div class="section presentations">
+            <h2 class="section-title">Presentations</h2>
             <ul>
                 <li>Bouchouras G., Markos D., Sykaras E., Tsiokanos A., Mylonas A. (2011). Lower body joints loading during gait. International Congress of the National Union Of Physical Education Teachers, June 2011, Athens</li>
                 <li>Bouchouras G., Samoladas E., Dimou K., Papacharisis V. (2009). Injuries during the Student Football Championship of Aristotle University of Thessaloniki. 12th National Congress of Physical Education & Sport, Thessaloniki 3-5 April 2009.</li>
@@ -122,8 +135,8 @@
             </ul>
         </div>
 
-        <div class="annexes">
-            <h3>Annexes</h3>
+        <div class="section annexes">
+            <h2 class="section-title">Annexes</h2>
             <ul>
                 <li>2009, the 12th National Congress of Physical Education and Sports. Union of Physical Education Teachers of Northern Greece, Thessaloniki 3-5 / 4/09</li>
                 <li>2009, Seminar - Workshop, "Learning for obesity" Aristotle University of Thessaloniki</li>
