@@ -6,6 +6,7 @@
     <title>Georgios Bouchouras - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    
 
 </head>
 <body>
@@ -136,25 +137,19 @@
     </div>
 
     <script>
-    document.getElementById('save-pdf').addEventListener('click', function () {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF({
-            format: 'a4',
-            unit: 'pt',
+        document.getElementById('save-pdf').addEventListener('click', function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                format: 'a4',
+                unit: 'pt',
+            });
+        
+            // Just add a simple text for testing
+            doc.text("This is a test PDF", 20, 30);
+        
+            // Save the PDF
+            doc.save('Portfolio.pdf');
         });
-
-        // Convert the HTML to PDF
-        doc.html(document.body, {
-            callback: function (doc) {
-                doc.save('Portfolio.pdf');
-            },
-            x: 10,
-            y: 10,
-            width: 575, // Max width for A4
-            windowWidth: 800
-        });
-    });
-    </script>
-</body>
-</html>
+        </script>
+        
 
