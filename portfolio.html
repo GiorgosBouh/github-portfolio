@@ -142,24 +142,13 @@
         </section>
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
         document.getElementById('save-pdf').addEventListener('click', function () {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF({
-                format: 'a4',
-                unit: 'pt',
-            });
-    
-            // Convert the entire HTML body to PDF
-            doc.html(document.body, {
-                callback: function (doc) {
-                    doc.save('Portfolio.pdf');
-                },
-                x: 10,
-                y: 10,
-                width: 575, // Max width for A4
-                windowWidth: 800
-            });
+            const element = document.body;
+            html2pdf()
+                .from(element)
+                .save('Portfolio.pdf');
         });
     </script>
     
