@@ -150,13 +150,19 @@
                 unit: 'pt',
             });
     
-            // Add simple text to the PDF as a test
-            doc.text("This is a test PDF", 20, 30);
-    
-            // Save the PDF with a specific name
-            doc.save('Portfolio.pdf');
+            // Convert the entire HTML body to PDF
+            doc.html(document.body, {
+                callback: function (doc) {
+                    doc.save('Portfolio.pdf');
+                },
+                x: 10,
+                y: 10,
+                width: 575, // Max width for A4
+                windowWidth: 800
+            });
         });
     </script>
+    
     
 </body>
 </html>
