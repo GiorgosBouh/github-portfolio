@@ -6,10 +6,18 @@
     <title>Georgios Bouchouras - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    
-
 </head>
 <body>
+    <script>
+        // Prompt for a password to access the Portfolio page
+        const password = prompt("Enter password to access the Portfolio page:");
+
+        if (password !== "yourpassword") { // Replace 'yourpassword' with your actual password
+            alert("Incorrect password. Access denied.");
+            window.location.href = "index.html"; // Redirects to home page if the password is incorrect
+        }
+    </script>
+    
     <div class="container">
         <header>
             <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo">
@@ -31,7 +39,6 @@
 
         <!-- Save as PDF button -->
         <button id="save-pdf" style="margin-bottom: 20px;">Save Portfolio as PDF</button>
-        </nav>
 
         <section>
             <h2>Portfolio</h2>
@@ -135,6 +142,7 @@
             </section>
         </section>
     </div>
+    
     <script>
         document.getElementById('save-pdf').addEventListener('click', function () {
             const { jsPDF } = window.jspdf;
@@ -142,7 +150,7 @@
                 format: 'a4',
                 unit: 'pt',
             });
-    
+
             // Convert the HTML to PDF
             doc.html(document.body, {
                 callback: function (doc) {
@@ -154,8 +162,9 @@
                 windowWidth: 800
             });
         });
-        </script>
-    </body>
-    </html>
+    </script>
+</body>
+</html>
+
         
 
