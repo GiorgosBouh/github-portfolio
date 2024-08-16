@@ -145,7 +145,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
         document.getElementById('save-pdf').addEventListener('click', function () {
-            const element = document.body;
+            const opt = {
+            margin:       10,
+            filename:     'Portfolio.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
             html2pdf()
                 .from(element)
                 .save('Portfolio.pdf');
