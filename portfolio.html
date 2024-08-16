@@ -143,6 +143,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
+        
         document.getElementById('save-pdf').addEventListener('click', function () {
             const element = document.body;
     
@@ -154,7 +155,11 @@
                 html2canvas:  { scale: 3 },             // Increase scale for better quality
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' } // A4 size
             };
-        </div>
+    
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+    </div>
     <style>
         body {
             overflow: visible;
@@ -174,10 +179,6 @@
             margin-bottom: 20px;
         }
       </style>
-            html2pdf().set(opt).from(element).save();
-        });
-    </script>
-    
 
     
     
