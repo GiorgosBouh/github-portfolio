@@ -156,6 +156,9 @@
                 html2canvas:  { scale: 2 },             // Scaling for better quality
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' } // A4 size
             };
+            <div class="page-break"></div>
+
+
     
             html2pdf().set(opt).from(element).save();
         });
