@@ -145,20 +145,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
         document.getElementById('save-pdf').addEventListener('click', function () {
-            const opt = {
-            margin:       10,
-            filename:     'Portfolio.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-        };
-        // Generate and save the PDF
-        html2pdf().from(element).set(opt).save();    
-        html2pdf()
-                .from(element)
-                .save('Portfolio.pdf');
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                unit: 'mm',
+                format: 'a4',
+                orientation: 'portrait'
+            });
+    
+            // Capture the HTML content
+            const content = document.body.innerHTML;
+    
+            // Use the doc.text() method or the more complex HTML rendering
+            doc.html(document.body, {
+                callback: function (doc) {
+                    doc.save('Portfolio.pdf');
+                },
+                x: 10,
+                y: 10,
+                width: 190 // A4 width in mm (210mm minus 20mm for margins)
+            });
         });
     </script>
+    
     
     
 </body>
