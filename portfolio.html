@@ -152,7 +152,9 @@
             html2canvas:  { scale: 2 },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
-            html2pdf()
+        // Generate and save the PDF
+        html2pdf().from(element).set(opt).save();    
+        html2pdf()
                 .from(element)
                 .save('Portfolio.pdf');
         });
