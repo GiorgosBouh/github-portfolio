@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgios Bouchouras - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <style>
         body {
-            overflow: visible;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%; /* Full width */
+            max-width: 800px; /* Slightly less than A4 width to prevent overflow */
+            margin: 0 auto; /* Center content */
+            padding: 20px; /* Add padding for better readability */
         }
 
         .page-break {
             page-break-before: always;
+            break-before: always;
         }
 
-        /* Ensure that content doesn't overflow the page */
-        .no-overflow {
-            overflow: visible !important;
-        }
-
-        /* Additional margin at the bottom to prevent clipping */
-        section {
+        header, section, nav {
             margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul > li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container no-overflow">
+    <div class="container">
         <header>
             <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo">
             <h1>Georgios Bouchouras, PhD</h1>
@@ -153,24 +168,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
         document.getElementById('save-pdf').addEventListener('click', function () {
-            const element = document.body;
-    
+            const element = document.querySelector('.container');
+
+            // Configure the PDF options for A4 size
             const opt = {
-                margin:       10,
-                filename:     'Portfolio.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  {
-                    scale: 5, // Higher scale to improve quality and prevent cutting
-                    logging: true, // Enable logging to diagnose issues
-                    width: element.scrollWidth
-                },
-                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                margin:       10,                       // Margin in mm
+                filename:     'Portfolio.pdf',          // Name of the PDF file
+                image:        { type: 'jpeg', quality: 0.98 }, // Image quality
+                html2canvas:  { scale: 2 },             // Increase scale for better quality
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' } // A4 size
             };
-    
+
             html2pdf().set(opt).from(element).save();
         });
     </script>
 </body>
 </html>
-  
+
 
