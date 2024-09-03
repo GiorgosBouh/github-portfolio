@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georgios Bouchouras - Publications</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .orcid-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 60vh; /* Adjust height to center content vertically */
+            text-align: center;
+        }
+
+        .orcid-section img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .orcid-section a {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #333; /* You can adjust the color as needed */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -22,18 +44,14 @@
                 <li><a href="news.html">News</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="projects.html">Projects</a></li>
-
             </ul>
         </nav>
 
-        <section>
-            <h2>ORCID</h2>
-            <div style="display: flex; align-items: center;">
-                <img src="orcid.png" alt="ORCID logo" style="width: 50px; height: 50px; margin-right: 10px;">
-                <a href="https://orcid.org/0000-0003-0566-3615" target="_blank" style="font-size: larger; text-decoration: none;">
-                    0000-0003-0566-3615
-                </a>
-            </div>
+        <section class="orcid-section">
+            <img src="orcid.png" alt="ORCID logo">
+            <a href="https://orcid.org/0000-0003-0566-3615" target="_blank">
+                0000-0003-0566-3615
+            </a>
         </section>
     </div>
 </body>
