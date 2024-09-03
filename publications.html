@@ -26,6 +26,27 @@
             text-decoration: none;
             color: #333; /* You can adjust the color as needed */
         }
+
+        .scholar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 40px; /* Space between ORCID and Google Scholar sections */
+        }
+
+        .scholar-section img {
+            width: 300px; /* Set the width */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            margin-bottom: 20px;
+        }
+
+        .scholar-section a {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #333; /* You can adjust the color as needed */
+        }
     </style>
 </head>
 <body>
@@ -51,6 +72,13 @@
             <img src="orcid.png" alt="ORCID logo">
             <a href="https://orcid.org/0000-0003-0566-3615" target="_blank">
                 0000-0003-0566-3615
+            </a>
+        </section>
+
+        <section class="scholar-section">
+            <img src="scholar.png" alt="Google Scholar logo">
+            <a href="https://scholar.google.gr/citations?hl=el&user=dSUj4GAAAAAJ&view_op=list_works&gmla=AC6lMd_bkf9K_udg15a5TuD8fkkn0huYc_UzDv67SlNrmqZSCfPm9zMO7mdcbjw5hk4AQnNb0XcP1ASkiU6tXsQrQut9LlZB89X6-Ic-PAhOiUbEwNcy8KsiiQ" target="_blank">
+                Google Scholar Profile
             </a>
         </section>
     </div>
