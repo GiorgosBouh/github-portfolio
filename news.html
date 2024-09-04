@@ -9,6 +9,7 @@
         /* Ensure the articles have proper separation */
         article {
             margin-bottom: 30px;
+            overflow: auto;
         }
 
         /* Float images to the left and wrap text around */
@@ -29,6 +30,13 @@
 
         p {
             text-align: justify;
+        }
+
+        /* Clear floating for each article */
+        article::after {
+            content: "";
+            display: table;
+            clear: both;
         }
     </style>
 </head>
@@ -54,37 +62,37 @@
         <section id="news-section">
             <h2>News</h2>
             
-            <article>
+            <article data-date="2024-08-07">
                 <h3><a href="post_semdh2024.html">SemDH2024</a></h3>
-                <p><em class="post-date">Posted on August 7, 2024</em></p>
+                <p><em>Posted on August 7, 2024</em></p>
                 <img src="semdh2024.jpg" alt="SemDH2024">
                 <p>Exploring LLM-based Semantic Analysis of Historical Legal Documents...</p>
             </article>
 
-            <article>
+            <article data-date="2024-07-25">
                 <h3><a href="post_genesy2024.html">GeNeSy2024</a></h3>
-                <p><em class="post-date">Posted on July 25, 2024</em></p>
+                <p><em>Posted on July 25, 2024</em></p>
                 <img src="GeNeSy2024.jpg" alt="GeNeSy2024">
                 <p>Presentation at the First Generative Neurosymbolic Workshop...</p>
             </article>
 
-            <article>
+            <article data-date="2024-07-30">
                 <h3><a href="open_day_metropolitan.html">Open Day | Movement Analysis Laboratory</a></h3>
-                <p><em class="post-date">Posted on July 30, 2024</em></p>
+                <p><em>Posted on July 30, 2024</em></p>
                 <img src="open_day_metropolitan.png" alt="open_day_metropolitan">
                 <p>We are excited to open our doors today and invite all of you to explore our Movement Analysis Lab...</p>
             </article>
 
-            <article>
+            <article data-date="2024-05-30">
                 <h3><a href="crete_may_2024.html">AI in the Health Domain</a></h3>
-                <p><em class="post-date">Posted on May 30, 2024</em></p>
+                <p><em>Posted on May 30, 2024</em></p>
                 <img src="crete_may_2024.jpg" alt="AI in Health Domain">
                 <p>I had the pleasure of presenting a lecture at Metropolitan College...</p>
             </article>
 
-            <article>
+            <article data-date="2024-04-30">
                 <h3><a href="Defterovathmia_syllogos.html">Workshop 'Applications of Artificial Intelligence in Education'</a></h3>
-                <p><em class="post-date">Posted on April 30, 2024</em></p>
+                <p><em>Posted on April 30, 2024</em></p>
                 <img src="syllogos_defterovathmia.jpg" alt="syllogos_defterovathmia">
                 <p>Today I had the pleasure of being a speaker at the workshop...</p>
             </article>
@@ -92,23 +100,24 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                const articles = Array.from(document.querySelectorAll('section#news-section article'));
-                
-                // Sort articles based on the date in their <em> tags
-                const sortedArticles = articles.sort((a, b) => {
-                    const dateA = new Date(a.querySelector('.post-date').textContent.replace('Posted on ', ''));
-                    const dateB = new Date(b.querySelector('.post-date').textContent.replace('Posted on ', ''));
+                const newsSection = document.querySelector('#news-section');
+                const articles = Array.from(newsSection.querySelectorAll('article'));
+
+                // Sort articles based on the date attribute
+                articles.sort((a, b) => {
+                    const dateA = new Date(a.getAttribute('data-date'));
+                    const dateB = new Date(b.getAttribute('data-date'));
                     return dateB - dateA; // Newest first
                 });
 
-                // Re-append articles in sorted order
-                const newsSection = document.querySelector('section#news-section');
-                sortedArticles.forEach(article => newsSection.appendChild(article));
+                // Remove and re-append articles in sorted order
+                articles.forEach(article => newsSection.appendChild(article));
             });
         </script>
     </div>
 </body>
 </html>
+
 
 
 
