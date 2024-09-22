@@ -62,18 +62,24 @@
         }
 
         /* Custom styling for left-aligned images stacked vertically with text wrapping */
-        .enlargeable {
+        .image-container {
             float: left;
-            width: 30%;
-            max-width: 200px;
-            height: auto;
             margin-right: 15px;
             margin-bottom: 10px;
-            clear: left;
+            width: 30%;
+            max-width: 200px;
         }
 
-        p {
-            overflow: hidden; /* Ensures the text wraps around the image stack */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
         }
 
     </style>
@@ -97,12 +103,21 @@
             </ul>
         </nav>
 
-        <section>
+        <section class="clearfix">
             <h2>Workshop 'Applications of Artificial Intelligence in Education'</h2>
             <p><em>Posted on April 30, 2024</em></p>
-            <img src="syllogos_defterovathmia.jpg" alt="syllogos_defterovathmia" class="enlargeable">
-            <img src="defterovathmia1.jpg" alt="defterovathmia1" class="enlargeable">
-            <img src="defterovathmia2.jpg" alt="defterovathmia2" class="enlargeable">
+            
+            <!-- Image containers to ensure alignment and stacking -->
+            <div class="image-container">
+                <img src="syllogos_defterovathmia.jpg" alt="syllogos_defterovathmia" class="enlargeable">
+            </div>
+            <div class="image-container">
+                <img src="defterovathmia1.jpg" alt="defterovathmia1" class="enlargeable">
+            </div>
+            <div class="image-container">
+                <img src="defterovathmia2.jpg" alt="defterovathmia2" class="enlargeable">
+            </div>
+
             <p>Today I had the pleasure of being a speaker at the workshop 'Applications of Artificial Intelligence in Education,' organized by the Association of Tutors of Northern Greece.</p>
             <p>It was an opportunity to present the interesting topics we are studying at the Intelligent Systems Lab of the University of the Aegean. We discussed how artificial intelligence can transform teaching practices and enhance individual learning. We explored useful tools and programs. Impressive participation with over 100 attendees. Let's join forces to explore and implement innovative solutions that will enhance learning. Congratulations to the association for this initiative.</p>
         </section>
@@ -145,6 +160,7 @@
     </script>
 </body>
 </html>
+
 
 
 
