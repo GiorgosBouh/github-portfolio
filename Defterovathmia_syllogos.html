@@ -61,24 +61,26 @@
             cursor: pointer;
         }
 
-        /* Image container to stack images vertically and align to the left */
-        .image-container img {
+        /* Style for aligning images vertically and allowing text to wrap */
+        .image-container {
             float: left;
-            width: 30%;
-            max-width: 200px;
-            height: auto;
             margin-right: 15px;
-            margin-bottom: 10px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
             display: block;
+            margin-bottom: 10px;
         }
 
         .clearfix::after {
             content: "";
-            clear: both;
             display: table;
+            clear: both;
         }
 
-        /* Wrapping paragraph styling to ensure text wraps the images if long enough */
+        /* Text will wrap around the left-aligned image block */
         p {
             text-align: justify;
         }
@@ -107,7 +109,7 @@
         <section class="clearfix">
             <h2>Workshop 'Applications of Artificial Intelligence in Education'</h2>
             <p><em>Posted on April 30, 2024</em></p>
-            
+
             <!-- Image container for vertical alignment -->
             <div class="image-container">
                 <img src="syllogos_defterovathmia.jpg" alt="syllogos_defterovathmia" class="enlargeable">
@@ -157,6 +159,7 @@
     </script>
 </body>
 </html>
+
 
 
 
