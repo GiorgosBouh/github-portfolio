@@ -61,18 +61,19 @@
             cursor: pointer;
         }
 
-        /* Custom styling for stacking images vertically and allowing text to wrap */
+        /* Custom styling for left-aligned images stacked vertically with text wrapping */
         .enlargeable {
-            display: block;
+            float: left;
             width: 30%;
             max-width: 200px;
             height: auto;
-            margin: 10px auto;
-            clear: both;
+            margin-right: 15px;
+            margin-bottom: 10px;
+            clear: left;
         }
 
         p {
-            clear: both; /* Ensures that the text starts below the floated images */
+            overflow: hidden; /* Ensures the text wraps around the image stack */
         }
 
     </style>
@@ -144,6 +145,7 @@
     </script>
 </body>
 </html>
+
 
 
 
