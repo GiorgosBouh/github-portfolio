@@ -61,6 +61,30 @@
             cursor: pointer;
         }
 
+        /* Custom styling for left-aligned images stacked vertically with text wrapping */
+        .image-container {
+            float: left;
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Text will wrap around the left-aligned image block */
+        p {
+            text-align: justify;
+        }
+
     </style>
 </head>
 <body>
@@ -82,11 +106,16 @@
             </ul>
         </nav>
 
-        <section>
+        <section class="clearfix">
             <h2>Open Day | School of Health | Metropolitan College | Campus Thessaloniki</h2>
             <p><em>Posted on September 20, 2024</em></p>
-            <img src="open_day_health1.jpg" alt="open_day_metropolitan" class="enlargeable" style="float: left; width: 30%; max-width: 200px; height: auto; margin-right: 15px; margin-bottom: 10px;">
-            <img src="open_day_health2.jpg" alt="open_day_metropolitan" class="enlargeable" style="float: left; width: 30%; max-width: 200px; height: auto; margin-right: 15px; margin-bottom: 10px;">
+
+            <!-- Image container for vertical alignment -->
+            <div class="image-container">
+                <img src="open_day_health1.jpg" alt="open_day_metropolitan" class="enlargeable">
+                <img src="open_day_health2.jpg" alt="open_day_metropolitan" class="enlargeable">
+            </div>
+
             <p>Today, we welcomed some of our students from the School of Health. We discussed an interdisciplinary approach to treating ischemic stroke patients and how our various departments can collaborate to improve patient health and overall quality of life.</p>
             <p>We also introduced our upcoming Center for Interdisciplinary Education and Research in Rehabilitation, based in Thessaloniki, which will soon be ready and will play a key role in enhancing both the academic experience and the professional success of our students.</p>
             <p>All our fellow professors and department heads were present to offer their valuable advice, each contributing from their area of expertise, helping to put together the pieces of the puzzle and reveal the full picture of a patient’s health and recovery journey. This is what interdisciplinarity truly means, and our college is a pioneer in this approach.</p>
