@@ -62,13 +62,14 @@
         }
 
         /* Custom styling for left-aligned images stacked vertically with text wrapping */
-        .image-container {
+        .media-container {
             float: left;
             margin-right: 15px;
             max-width: 200px;
         }
 
-        .image-container img {
+        .media-container img, 
+        .media-container iframe {
             width: 100%;
             display: block;
             margin-bottom: 10px;
@@ -80,7 +81,7 @@
             clear: both;
         }
 
-        /* Text will wrap around the left-aligned image block */
+        /* Text will wrap around the left-aligned media block */
         p {
             text-align: justify;
         }
@@ -110,26 +111,26 @@
             <h2>Open Day | School of Health | Metropolitan College | Campus Thessaloniki</h2>
             <p><em>Posted on September 20, 2024</em></p>
 
-            <!-- Image container for vertical alignment -->
-            <div class="image-container">
+            <!-- Media container for vertical alignment -->
+            <div class="media-container">
                 <img src="open_day_health1.jpg" alt="open_day_metropolitan" class="enlargeable">
                 <img src="open_day_health2.jpg" alt="open_day_metropolitan" class="enlargeable">
+
+                <!-- Vimeo video embed with left alignment -->
+                <div style="padding-top: 56.25%; position:relative; width: 100%; margin-bottom: 10px;">
+                    <iframe src="https://player.vimeo.com/video/1011727265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                            frameborder="0" 
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                            title="Open Day September 2024|School of Health|Metropolitan College|Campus Thessaloniki">
+                    </iframe>
+                </div>
             </div>
 
             <p>Today, we welcomed some of our students from the School of Health. We discussed an interdisciplinary approach to treating ischemic stroke patients and how our various departments can collaborate to improve patient health and overall quality of life.</p>
             <p>We also introduced our upcoming Center for Interdisciplinary Education and Research in Rehabilitation, based in Thessaloniki, which will soon be ready and will play a key role in enhancing both the academic experience and the professional success of our students.</p>
             <p>All our fellow professors and department heads were present to offer their valuable advice, each contributing from their area of expertise, helping to put together the pieces of the puzzle and reveal the full picture of a patient’s health and recovery journey. This is what interdisciplinarity truly means, and our college is a pioneer in this approach.</p>
             <p>The discussion was not exhaustive but served as an important starting point for future collaboration and knowledge sharing.</p>
-            
-            <!-- Vimeo video embed -->
-            <div style="padding:56.25% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/1011727265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                        frameborder="0" 
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                        style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-                        title="Open Day September 2024|School of Health|Metropolitan College|Campus Thessaloniki"></iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
         </section>
 
         <!-- The Modal -->
@@ -140,6 +141,7 @@
             </div>
         </div>
     </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
     <script>
         // Get modal element and the image inside it
