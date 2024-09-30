@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 3 - Georgios Bouchouras</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the enlarged image modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.9); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Custom styling for left-aligned images stacked vertically with text wrapping */
+        .image-container {
+            float: left;
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Text will wrap around the left-aligned image block */
+        p {
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo">
+            <h1>Georgios Bouchouras, PhD</h1>
+            <p><strong>Senior Lecturer in Biomechanics</strong></p>
+            <p style="font-size: smaller;">Metropolitan College, in collaboration with University of East London</p>
+            <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</strong></p>
+        </header>
+
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+
+        <section class="clearfix">
+            <h2>Study Guide for the General Secretariat for Vocational Education, Training & Lifelong Learning</h2>
+            <p><em>Posted on September 30, 2024</em></p>
+
+            <!-- Image container for vertical alignment -->
+            <div class="image-container">
+                <img src="free_gym.jpg" alt="free_gym" class="enlargeable">
+            </div>
+
+            <p>We are pleased to share that our team has completed the development of the study guide for the General Secretariat for Vocational Education, Training & Lifelong Learning of the Greek Ministry of Education, Religious Affairs, and Sports.</p>
+            <p>This comprehensive, modern, and up-to-date guide is tailored to support the specialty of Instructor of Free Gymnastics-Aerobics.</p>
+            <p>The guide was created with the goal of providing structured educational resources that cater to the needs of both students and instructors, enhancing the quality of training in this field.</p>
+            <p>For those who may wish to translate the guide from Greek to English, free online tools can be used to facilitate the process.</p>
+            <p><a href="https://gsvetlly.minedu.gov.gr/publications/docs2023/Οδηγός_Κατάρτισης_Εκπαιδευτής_Ελεύθερης_Γυμναστικής__Aerobics.pdf" target="_blank">Click here to view the guide</a>.</p>
+
+            
+           
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="imgModal">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get modal element and the image inside it
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgModal");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Add event listeners to all images with class 'enlargeable'
+        var images = document.getElementsByClassName("enlargeable");
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // When the user clicks on the close button, close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
