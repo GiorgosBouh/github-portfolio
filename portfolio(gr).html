@@ -23,7 +23,7 @@
 
         .container {
             width: 100%; /* Full width */
-            max-width: 800px; /* Slightly less than A4 width to prevent overflow */
+            max-width: 750px; /* Slightly less than A4 width to prevent overflow */
             margin: 0 auto; /* Center content */
             padding: 20px; /* Add padding for better readability */
         }
@@ -412,7 +412,7 @@
                 margin:       10,                       // Margin in mm
                 filename:     'Portfolio.pdf',          // Name of the PDF file
                 image:        { type: 'jpeg', quality: 0.98 }, // Image quality
-                html2canvas:  { scale: 2 },             // Increase scale for better quality
+                html2canvas:  { scale: 1.5 },             // Increase scale for better quality
                 jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' } // A4 size
             };
 
