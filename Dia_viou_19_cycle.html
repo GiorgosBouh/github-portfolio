@@ -1,0 +1,128 @@
+open_day_metropolitan_health_sept_2024.html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 3 - Georgios Bouchouras</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the enlarged image modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.9); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Custom styling for left-aligned images stacked vertically with text wrapping */
+        .image-container {
+            float: left;
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Text will wrap around the left-aligned image block */
+        p {
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo">
+            <h1>Georgios Bouchouras, PhD</h1>
+            <p><strong>Senior Lecturer in Biomechanics</strong></p>
+            <p style="font-size: smaller;">Metropolitan College, in collaboration with University of East London</p>
+            <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</strong></p>
+        </header>
+
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+
+        <section class="clearfix">
+            <h2>Launching the 19th Cycle of the “Youth Sports Academy Coach” Lifelong Learning Program|Aristotle University of Thessaloniki
+                Center for Education and Lifelong Learning</h2>
+            <p><em>Posted on December 15, 2024</em></p>
+
+            <!-- Image container for vertical alignment -->
+            <div class="image-container">
+                <img src="Dia_viou_19_cycle.png" alt="Dia_viou_19_cycle" class="enlargeable">
+                <img src="Dia_viou_19_cycle.png" alt="Dia_viou_19_cycle" class="enlargeable">
+            </div>
+
+            <p>We are proud to announce the launch of the 19th cycle of the Youth Sports Academy Coach program, one of the longest-running lifelong learning initiatives offered by a university in Greece. Over the past decade, this program has trained more than 600 participants, equipping them with the skills and knowledge to excel in coaching and sports education.</p>
+            <p>The program focuses on teaching and applying fundamental scientific principles for training children in their early childhood and preadolescent years. Participants will delve into essential aspects such as sports pedagogy, organization and management of sports services, and bridging the gap between theory and practice.</p>
+            <p>This initiative is designed for individuals passionate about advancing their expertise in teaching, organizing, and delivering high-quality athletic activities. The curriculum emphasizes the importance of integrating pedagogical and athletic approaches to ensure coaches are equipped to implement effective and engaging sports programs.</p>
+            <p>By completing this program, participants will gain the necessary tools to enhance the quality and effectiveness of their teaching, empowering the next generation of young athletes. Join us as we continue this transformative journey in sports education!</p>
+            
+        </section>
+    </div>
+</body>
+</html>
