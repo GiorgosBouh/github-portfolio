@@ -1,10 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post 3 - Georgios Bouchouras</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the enlarged image modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.9); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Style for aligning images vertically and allowing text to wrap */
+        .image-container {
+            float: left;
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Text will wrap around the left-aligned image block */
+        p {
+            text-align: justify;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -25,52 +104,56 @@
             </ul>
         </nav>
 
-        <!-- Image container for vertical alignment -->
-        <div class="image-container">
-            <img src="pregnancy_falls.jpg" alt="pregnancy_falls" class="enlargeable">
-        </div>
-        <section>
+        <section class="clearfix">
             <h2>Pregnancy, Posture, Gait, and Falls | Metropolitan College | Campus Thessaloniki</h2>
-            <p><em>Posted on March 05, 2025</em></p>
+            <p><em>Posted on March 04, 2025</em></p>
+
+            <!-- Image container for vertical alignment -->
+            <div class="image-container">
+                <img src="pregnancy_falls.jpg" alt="master_1" class="enlargeable">
+            </div>
+
             <p>On March 4, 2025, we successfully conducted the seminar “Pregnancy, Posture, Gait, and Falls” at Metropolitan College, Thessaloniki Campus, as part of the DevelopingU initiative. The event provided valuable insights into the biomechanical changes during pregnancy, their effects on posture and gait, and the associated fall risks.</p>
             <p>I would like to extend my sincere gratitude to the Program Leader of the Midwifery Department, Emmanouela Dimoveli, for the invitation and her support in organizing this seminar. A heartfelt thank you to all participants for their engagement and thought-provoking discussions. Your enthusiasm underscores the importance of bridging biomechanics and maternal health in clinical practice and education. Looking forward to future collaborations and knowledge-sharing opportunities!</p>
+            </a></p>
         </section>
-     <!-- The Modal -->
-     <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <div class="modal-content">
-            <img id="imgModal">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="imgModal">
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    // Get modal element and the image inside it
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("imgModal");
-    var closeBtn = document.getElementsByClassName("close")[0];
+    <script>
+        // Get modal element and the image inside it
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgModal");
+        var closeBtn = document.getElementsByClassName("close")[0];
 
-    // Add event listeners to all images with class 'enlargeable'
-    var images = document.getElementsByClassName("enlargeable");
-    for (var i = 0; i < images.length; i++) {
-        images[i].onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
+        // Add event listeners to all images with class 'enlargeable'
+        var images = document.getElementsByClassName("enlargeable");
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
         }
-    }
 
-    // When the user clicks on the close button, close the modal
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        // When the user clicks on the close button, close the modal
+        closeBtn.onclick = function() {
             modal.style.display = "none";
         }
-    }
-</script>
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     
 </body>
 </html>
