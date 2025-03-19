@@ -1,0 +1,305 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 3 - Georgios Bouchouras</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling for the enlarged image modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.9); 
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Add Animation */
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Style for aligning images vertically and allowing text to wrap */
+        .image-container {
+            float: left;
+            margin-right: 15px;
+            max-width: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Text will wrap around the left-aligned image block */
+        p {
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo">
+            <h1>Georgios Bouchouras, PhD</h1>
+            <p><strong>Senior Lecturer in Biomechanics</strong></p>
+            <p style="font-size: smaller;">Metropolitan College, in collaboration with University of East London</p>
+            <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</strong></p>
+        </header>
+
+        <nav>
+            <ul class="tabs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+
+        <section class="clearfix">
+            <h2>The Importance of Knowledge Graphs in Everyday Decision-Making for Health and Education Professionals</h2>
+            <p><em>Posted on March 19, 2025</em></p>
+
+            <!-- Image container for vertical alignment -->
+            <div class="image-container">
+                <img src="Sports_inj_4.jpg" alt="Sports_inj_4" class="enlargeable">
+            </div>
+
+            <p>Artificial intelligence (AI) is transforming how professionals in healthcare and education access and use information. While large language models (LLMs) like ChatGPT have gained popularity for their ability to generate text, they often lack transparency, reasoning, and scientific accuracy. Knowledge graphs (KGs), on the other hand, provide a structured and explainable way to organize and utilize information, making them particularly valuable for trustworthy decision-making in high-stakes environments. Recent research highlights how knowledge graphs act as a foundation for verifying AI-generated information, ensuring accuracy, governance, and trustworthiness in decision-making processes. This is particularly important in fields like healthcare and education, where decisions impact lives and require verifiable sources of truth. This article explores why knowledge graphs are essential tools for professionals in these fields, ensuring credible, structured, and scientifically validated insights.</p>
+            <p>What Are Knowledge Graphs? A knowledge graph organizes information into a network of entities (concepts, people, events, objects) and their relationships. Unlike traditional databases that store isolated pieces of information, knowledge graphs connect data in a meaningful way, allowing professionals to trace relationships, ask complex questions, and derive insights. For example, in healthcare, a knowledge graph can connect diseases, symptoms, medications, and patient histories to provide better clinical decision support. In education, it can map learning objectives, cognitive skills, and student progress to help teachers adapt lessons to individual needs. By providing a structured framework for validating AI-generated responses, knowledge graphs help ensure that automated decision-making systems remain trustworthy and evidence-based.</p>
+            <p>Why Knowledge Graphs Matter in Health and Education? 1. A Reliable and Verified Source of Knowledge
+
+                One of the biggest challenges for professionals is ensuring that the information they use is scientifically valid and up-to-date.
+                    •	In healthcare, knowledge graphs integrate data from clinical guidelines, peer-reviewed research, and electronic health records, providing a clear, evidence-based approach to decision-making.
+                    •	In education, they align with curricula, learning theories, and assessment standards, ensuring that teaching methods and interventions are backed by research.
+                
+                Unlike LLMs, which generate responses based on probability rather than verified knowledge, knowledge graphs provide a formal structure for evaluating the validity of AI-generated insights.
+                
+                ⸻
+                
+                2. Transparency and Explainability
+                
+                Professionals in health and education need to understand the reasoning behind recommendations. Knowledge graphs provide clear explanations by showing how information is connected.
+                
+                For example:
+                    •	A doctor using a medical knowledge graph can see why a specific treatment is recommended based on published guidelines and patient data.
+                    •	A teacher using an education knowledge graph can track how a student’s learning difficulties relate to their previous performance and recommended interventions.
+                
+                This level of transparency is essential, especially in fields where accountability matters. LLMs, in contrast, lack explainability, as they generate responses without revealing their underlying logic.
+                
+                ⸻
+                
+                3. Integrating Different Sources of Information
+                
+                Health and education professionals often rely on multiple sources of information. Knowledge graphs can integrate data from:
+                    •	Electronic Health Records (EHRs)
+                    •	Medical research databases
+                    •	Educational curricula and assessment data
+                    •	Behavioral and social factors impacting learning
+                
+                This makes them especially useful for understanding complex conditions, such as autism, ADHD, or Parkinson’s Disease, where multiple factors (genetics, behavior, environment) must be considered.
+                
+                By ensuring data governance and consistency, knowledge graphs help prevent misinformation in AI-driven decision-making. LLMs, on the other hand, can produce conflicting or misleading answers depending on the dataset they were trained on.
+                
+                ⸻
+                
+                4. Personalized Decision-Making
+                
+                Healthcare and education both require personalized approaches based on individual needs.
+                    •	In medicine, a knowledge graph can recommend personalized treatments based on a patient’s medical history, genetic profile, and response to past interventions.
+                    •	In education, it can adapt learning plans based on a student’s strengths, weaknesses, and progress over time.
+                
+                While LLMs can generate general advice, they lack structured access to real-world patient or student data, making them less effective for personalized recommendations.
+                
+                ⸻
+                
+                5. Ensuring Scientific Rigor and Compliance
+                
+                Fields like healthcare and education must follow strict ethical and regulatory standards. Knowledge graphs ensure that professionals work within approved guidelines, such as:
+                    •	Medical regulations (WHO, FDA, CDC)
+                    •	Educational standards and curricula
+                    •	Privacy laws (GDPR, HIPAA)
+                
+                By embedding governance rules directly into the data structure, knowledge graphs help enforce compliance with these regulations. In contrast, LLMs do not inherently follow ethical or regulatory standards, as they generate text without structured oversight.</p>
+            <p>Knowledge Graphs and the Future of AI Reasoning
+
+                Frank van Harmelen, in his presentation “The K in ‘neuro-symbolic’ stands for ‘knowledge’,” argues that many AI models lack true semantic understanding. He warns against the illusion of intelligence in AI models that appear to understand concepts but lack actual reasoning ability.
+                
+                This is where knowledge graphs outperform LLMs—they preserve meaning and logical connections, ensuring that AI-powered tools provide valid, explainable, and structured knowledge.
+                
+                In enterprise AI applications, knowledge graphs are increasingly used to validate and verify AI-generated content, ensuring that outputs are trustworthy, transparent, and compliant with real-world standards.
+                
+                Emerging neuro-symbolic AI approaches combine knowledge graphs with neural networks, aiming to create AI systems that think and reason more like humans. This is especially promising for complex decision-making in medicine and education, where structured knowledge is essential.</p>
+            <p>Conclusion: Why Knowledge Graphs Are the Future
+
+                While LLMs are powerful for generating text and answering general questions, they lack the structure, reasoning, and reliability needed for decision-making in health and education.
+                
+                By using knowledge graphs, professionals can ensure that their decisions are:
+                ✔ Scientifically valid
+                ✔ Explainable and transparent
+                ✔ Integrated across different sources
+                ✔ Aligned with ethical and regulatory standards
+                
+                As AI continues to evolve, combining knowledge graphs with LLMs may offer the best of both worlds—leveraging structured knowledge while maintaining natural language interaction. However, for professional applications where accuracy, reliability, and reasoning matter, knowledge graphs remain the most trusted solution.</p>
+                <p><table border="1" cellspacing="0" cellpadding="8">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Knowledge Graphs (KGs)</th>
+                            <th>Large Language Models (LLMs)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Knowledge Source</strong></td>
+                            <td>Structured, validated data from research, guidelines, and expert sources</td>
+                            <td>Unstructured, trained on large datasets with no direct validation</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Explainability</strong></td>
+                            <td>High – shows relationships between concepts and reasoning</td>
+                            <td>Low – operates as a black-box with no explicit reasoning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scientific Validity</strong></td>
+                            <td>Based on formal ontologies and verified sources</td>
+                            <td>May generate plausible but incorrect information ("hallucinations")</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personalization</strong></td>
+                            <td>Uses structured data to create personalized recommendations</td>
+                            <td>Can generate general responses but lacks structured user data access</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Integration</strong></td>
+                            <td>Connects multiple structured datasets (EHRs, research, curricula)</td>
+                            <td>Cannot integrate real-time structured data without additional tools</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Regulatory Compliance</strong></td>
+                            <td>Can be designed to follow medical, educational, and privacy regulations</td>
+                            <td>No inherent compliance with regulatory standards</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Logical Reasoning</strong></td>
+                            <td>Supports inference, deduction, and rule-based reasoning</td>
+                            <td>Predicts text based on probability, lacks true reasoning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transparency</strong></td>
+                            <td>Clear relationships between data points, easy to audit</td>
+                            <td>Outputs cannot be easily traced to a single source</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Misinformation Risk</strong></td>
+                            <td>Low – relies on curated and approved data</td>
+                            <td>High – can generate factually incorrect or misleading responses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trustworthiness</strong></td>
+                            <td>High – built on governed and structured data</td>
+                            <td>Variable – depends on training data and model tuning</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best Use Case</strong></td>
+                            <td>Clinical decision support, education planning, research</td>
+                            <td>General knowledge generation, summarization, content creation</td>
+                        </tr>
+                    </tbody>
+                </table><p>
+        </section>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <img id="imgModal">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get modal element and the image inside it
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("imgModal");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Add event listeners to all images with class 'enlargeable'
+        var images = document.getElementsByClassName("enlargeable");
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        // When the user clicks on the close button, close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
