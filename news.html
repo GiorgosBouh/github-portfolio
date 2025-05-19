@@ -10,6 +10,7 @@
         article {
             margin-bottom: 30px;
             overflow: auto;
+            display: none; /* Initially hide all articles */
         }
 
         /* Float images to the left and wrap text around */
@@ -37,6 +38,32 @@
             content: "";
             display: table;
             clear: both;
+        }
+
+        /* Pagination controls */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+
+        .pagination button.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .pagination button:hover:not(.active) {
+            background-color: #e9ecef;
         }
     </style>
 </head>
@@ -73,7 +100,7 @@
                 <h3><a href="post_genesy2024.html">GeNeSy2024</a></h3>
                 <p><em>Posted on July 25, 2024</em></p>
                 <img src="GeNeSy2024.jpg" alt="GeNeSy2024">
-                <p>Presentation at the First Generative Neurosymbolic Workshop. I am thrilled to share that I just finished my talk at the First Generative Neurosymbolic Workshop, held as part of the Extended Semantic Web Conference in Crete. My presentation, titled “How We Can Use LLMs to Create an Ontology for Parkinson’s Disease,” was successfully completed. In this talk, I explored the innovative ways in which large language models (LLMs) can be leveraged to develop a comprehensive ontology for Parkinson’s Disease. This ontology aims to enhance our understanding and organization of knowledge related to the disease, ultimately contributing to more effective research and treatment strategies. Collaborating with Pavlos Bitilis and George Vouros, our team at the Intelligent Systems Research Lab (i-Lab) is excited to share these insights and advancements in the field. The potential of LLMs to transform the way we approach complex medical conditions is immense, and we are eager to continue pushing the boundaries of this research. Stay tuned for more updates as we further develop these methods and explore new applications! Konstantinos I. Kotis Pavlos Bitilis George Vouros Intelligent Systems Research Lab (i-Lab)</p>
+                <p>Presentation at the First Generative Neurosymbolic Workshop. I am thrilled to share that I just finished my talk at the First Generative Neurosymbolic Workshop, held as part of the Extended Semantic Web Conference in Crete. My presentation, titled "How We Can Use LLMs to Create an Ontology for Parkinson's Disease," was successfully completed. In this talk, I explored the innovative ways in which large language models (LLMs) can be leveraged to develop a comprehensive ontology for Parkinson's Disease. This ontology aims to enhance our understanding and organization of knowledge related to the disease, ultimately contributing to more effective research and treatment strategies. Collaborating with Pavlos Bitilis and George Vouros, our team at the Intelligent Systems Research Lab (i-Lab) is excited to share these insights and advancements in the field. The potential of LLMs to transform the way we approach complex medical conditions is immense, and we are eager to continue pushing the boundaries of this research. Stay tuned for more updates as we further develop these methods and explore new applications! Konstantinos I. Kotis Pavlos Bitilis George Vouros Intelligent Systems Research Lab (i-Lab)</p>
             </article>
 
             <article data-date="2024-07-30">
@@ -140,34 +167,39 @@
             </article>
 
             <article data-date="2024-12-15">
-                <h3><a href="Dia_viou_19_cycle.html">Launching the 19th session of the “Youth Sports Academy Coach” Lifelong Learning Program | Aristotle University of Thessaloniki|Center for Education and Lifelong Learning</a></h3>
+                <h3><a href="Dia_viou_19_cycle.html">Launching the 19th session of the "Youth Sports Academy Coach" Lifelong Learning Program | Aristotle University of Thessaloniki|Center for Education and Lifelong Learning</a></h3>
                 <p><em>Posted on December 15, 2024</em></p>
                 <img src="Dia_viou_19_cycle_2.png" alt="Dia_viou_19_cycle_2">
                 <p>We are proud to announce the launch of the 19th session of the Youth Sports Academy Coach program, one of the longest-running lifelong learning initiatives offered by a university in Greece. Over the past decade, this program has trained more than 600 participants, equipping them with the skills and knowledge to excel in coaching and sports education</p>
+            </article>
             
             <article data-date="2025-01-16">
                 <h3><a href="Sports_Injuries_Congress.html">Machine Learning for Sports Injury Prediction: RNNs and IoT Data</a></h3>
                 <p><em>Posted on January 16, 2025</em></p>
                 <img src="Sports_inj_4.jpg" alt="Sports_inj_4">
-                <p>I had the honor of speaking at the 3rd Congress “Recent Advances in Sports Injuries: Trends and Prevention,” organized by the 2nd Orthopaedic Department of Aristotle University of Thessaloniki in collaboration with the Hellenic Association of Arthroscopy, Knee Surgery & Sports Traumatology “George Noulis” and PAOK FC.</p>
+                <p>I had the honor of speaking at the 3rd Congress "Recent Advances in Sports Injuries: Trends and Prevention," organized by the 2nd Orthopaedic Department of Aristotle University of Thessaloniki in collaboration with the Hellenic Association of Arthroscopy, Knee Surgery & Sports Traumatology "George Noulis" and PAOK FC.</p>
+            </article>
             
             <article data-date="2025-02-05">
                  <h3><a href="MSc_Presentation.html">Successful Completion of my 2nd Master of Science Thesis Defense</a></h3>
                 <p><em>Posted on February 05, 2025</em></p>
                 <img src="master_1.jpg" alt="master_1">
-                <p>Today, I successfully defended my Masters thesis in the MSc by Research in Intelligent Information Systems with excellent evaluation. My research, titled “Large Language Models for the Engineering of a Parkinson Disease Monitoring and Alerting Ontology,” marks the completion of a demanding yet highly rewarding academic journey</p>
+                <p>Today, I successfully defended my Masters thesis in the MSc by Research in Intelligent Information Systems with excellent evaluation. My research, titled "Large Language Models for the Engineering of a Parkinson Disease Monitoring and Alerting Ontology," marks the completion of a demanding yet highly rewarding academic journey</p>
+            </article>
             
             <article data-date="2025-03-05">
                 <h3><a href="Pregnancy_Posture_Gait_and_Falls.html">Pregnancy, Posture, Gait, and Falls | Metropolitan College | Campus Thessaloniki</a></h3>
                <p><em>Posted on March 05, 2025</em></p>
                <img src="pregnancy_falls.jpg" alt="pregnancy_falls">
-               <p>On March 4, 2025, we successfully conducted the seminar “Pregnancy, Posture, Gait, and Falls” at Metropolitan College, Thessaloniki Campus, as part of the DevelopingU initiative. The event provided valuable insights into the biomechanical changes during pregnancy, their effects on posture and gait, and the associated fall risks.</p>
+               <p>On March 4, 2025, we successfully conducted the seminar "Pregnancy, Posture, Gait, and Falls" at Metropolitan College, Thessaloniki Campus, as part of the DevelopingU initiative. The event provided valuable insights into the biomechanical changes during pregnancy, their effects on posture and gait, and the associated fall risks.</p>
+            </article>
           
             <article data-date="2025-03-19">
                 <h3><a href="Opinion_article_KG_LLMs.html">The Importance of Knowledge Graphs in Everyday Decision-Making for Health and Education Professionals</a></h3>
                 <p><em>Posted on March 19, 2025</em></p>
                 <img src="llm_KG.png" alt="llm_KG">
                 <p>Artificial intelligence (AI) is changing how professionals in healthcare and education access and use information. While LLMs like ChatGPT can generate text, they often lack transparency, reasoning, and scientific accuracy. In contrast, Knowledge Graphs (KGs) provide a structured and explainable way to organize and use information, making them particularly valuable for trustworthy decision-making in high-stakes fields.</p>
+            </article>
             
             <article data-date="2025-05-08">
                 <h3><a href="Maternal_Health_Risk.html">Maternal Risk Decision Support: A Student-Led Innovation
@@ -176,23 +208,31 @@
                 <img src="Maternal4.png" alt="Maternal4">
                 <p>We are proud to announce that our first-year midwifery students, Angela Lavntarakou and Eleni Samara, presented their research at the 10th Student Symposium on Research and Innovation hosted by Metropolitan College.
                     Under my academic supervision, our team developed a web-based Maternal Risk Decision Support System, now publicly available:</p>
+            </article>
             
             <article data-date="2025-04-13">
-                <h3><a href="Opinion_article_KG_and_Sports_Injuries.html">Sports Injury Prediction Is Broken — Here’s How Semantic AI Can Fix It</a></h3>
+                <h3><a href="Opinion_article_KG_and_Sports_Injuries.html">Sports Injury Prediction Is Broken — Here's How Semantic AI Can Fix It</a></h3>
                 <p><em>Posted on March 19, 2025</em></p>
                 <img src="KG_Sports_Injuries.png" alt="KG_Sports_Injuries">
-                <p>Years ago, I was training for long jump — a sport I loved deeply. One day during a lift off, I felt something go wrong in my knee. It turned out to be a meniscus tear, and although my ACL wasn’t fully torn, it was likely affected too. That injury changed everything. I couldn’t train the same way again, and eventually, many years later, it pushed me toward a different path — a PhD focused on knee and ACL reconstruction.
+                <p>Years ago, I was training for long jump — a sport I loved deeply. One day during a lift off, I felt something go wrong in my knee. It turned out to be a meniscus tear, and although my ACL wasn't fully torn, it was likely affected too. That injury changed everything. I couldn't train the same way again, and eventually, many years later, it pushed me toward a different path — a PhD focused on knee and ACL reconstruction.
 
-                    Since then, I’ve worked in biomechanics, AI, and knowledge graphs. And looking back, I often ask myself: could that injury have been predicted — or even prevented — if we had the right tools?
+                    Since then, I've worked in biomechanics, AI, and knowledge graphs. And looking back, I often ask myself: could that injury have been predicted — or even prevented — if we had the right tools?
                     
                     My answer today is yes. But we need a new kind of thinking.</p>
+            </article>
 
-            </section>
+            <div class="pagination" id="pagination-controls">
+                <!-- Pagination buttons will be added here by JavaScript -->
+            </div>
+        </section>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const newsSection = document.querySelector('#news-section');
                 const articles = Array.from(newsSection.querySelectorAll('article'));
+                const paginationControls = document.getElementById('pagination-controls');
+                const itemsPerPage = 4;
+                let currentPage = 1;
 
                 // Sort articles based on the date attribute
                 articles.sort((a, b) => {
@@ -202,13 +242,82 @@
                 });
 
                 // Remove and re-append articles in sorted order
-                articles.forEach(article => newsSection.appendChild(article));
+                articles.forEach(article => newsSection.insertBefore(article, paginationControls));
+
+                // Initialize pagination
+                function setupPagination() {
+                    const pageCount = Math.ceil(articles.length / itemsPerPage);
+                    paginationControls.innerHTML = '';
+
+                    // Create Previous button
+                    const prevButton = document.createElement('button');
+                    prevButton.innerText = 'Previous';
+                    prevButton.addEventListener('click', () => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            showPage(currentPage);
+                        }
+                    });
+                    paginationControls.appendChild(prevButton);
+
+                    // Create page buttons
+                    for (let i = 1; i <= pageCount; i++) {
+                        const pageButton = document.createElement('button');
+                        pageButton.innerText = i;
+                        if (i === currentPage) {
+                            pageButton.classList.add('active');
+                        }
+                        pageButton.addEventListener('click', () => {
+                            currentPage = i;
+                            showPage(currentPage);
+                        });
+                        paginationControls.appendChild(pageButton);
+                    }
+
+                    // Create Next button
+                    const nextButton = document.createElement('button');
+                    nextButton.innerText = 'Next';
+                    nextButton.addEventListener('click', () => {
+                        if (currentPage < pageCount) {
+                            currentPage++;
+                            showPage(currentPage);
+                        }
+                    });
+                    paginationControls.appendChild(nextButton);
+                }
+
+                // Show specific page
+                function showPage(page) {
+                    const startIndex = (page - 1) * itemsPerPage;
+                    const endIndex = startIndex + itemsPerPage;
+
+                    articles.forEach((article, index) => {
+                        if (index >= startIndex && index < endIndex) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+
+                    // Update active button
+                    const buttons = paginationControls.querySelectorAll('button');
+                    buttons.forEach((button, index) => {
+                        if (index === 0) return; // Skip Previous button
+                        if (index === buttons.length - 1) return; // Skip Next button
+                        
+                        if (parseInt(button.innerText) === page) {
+                            button.classList.add('active');
+                        } else {
+                            button.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Initialize
+                setupPagination();
+                showPage(currentPage);
             });
         </script>
     </div>
 </body>
 </html>
-
-
-
-
