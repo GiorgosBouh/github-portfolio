@@ -3,17 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Georgios Bouchouras - Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Georgios Bouchouras, PhD - Projects</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-gray: #f8f9fa;
+            --dark-gray: #343a40;
+            --text-color: #333;
+            --text-light: #6c757d;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 30px;
+        }
+        
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light-gray);
+            margin-bottom: 20px;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        
+        .tabs li {
+            margin: 0 15px;
+        }
+        
+        .tabs a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .tabs a:hover {
+            color: var(--secondary-color);
+            background-color: var(--light-gray);
+        }
+        
+        .tabs a.active {
+            color: white;
+            background-color: var(--secondary-color);
+        }
+        
+        section {
+            padding: 20px 0;
+        }
+        
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .project-list li {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: white;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            vertical-align: middle;
+            color: var(--secondary-color);
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .project-org {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .project-details {
+            margin-top: 10px;
+            color: var(--text-color);
+        }
+        
+        .section-subtitle {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tabs li {
+                margin: 5px 0;
+            }
+            
+            .project-list li {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
             <img src="profile.jpg" alt="Georgios Bouchouras, PhD" class="profile-photo">
-            <h1>Georgios Bouchouras</h1>
-            <p>Senior Lecturer in Biomechanics</p>
-            <p style="font-size: smaller;">Currently at Metropolitan College | University of East London</p>
-            <p>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</p>
+            <h1>Georgios Bouchouras, PhD</h1>
+            <p><strong>Senior Lecturer in Biomechanics</strong></p>
+            <p style="color: var(--text-light);">Currently at Metropolitan College | University of East London</p>
+            <p style="color: var(--secondary-color); font-weight: 500;">Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</p>
         </header>
 
         <nav>
@@ -21,56 +207,100 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="publications.html">Publications</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a class="active" href="projects.html">Projects</a></li>
             </ul>
         </nav>
 
         <section>
-            <h2>Projects</h2>
-            <p style="font-size: smaller; ">Representatives</p>
+            <h2>Research & Professional Projects</h2>
+            <p class="section-subtitle">Selected Initiatives and Collaborations</p>
 
-            <ul style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6;">
-                <li>🧍‍♂️<strong>Study of Injuries in the Developing Human Skeleton</strong><br>
-                    <em>Special Account for Research Funds, Aristotle University of Thessaloniki</em>
+            <ul class="project-list">
+                <li>
+                    <span class="project-icon">🧍‍♂️</span>
+                    <span class="project-title">Study of Injuries in the Developing Human Skeleton</span>
+                    <span class="project-org">Special Account for Research Funds, Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Comprehensive research into injury patterns and prevention strategies for developing skeletal systems in youth athletes.
+                    </div>
                 </li>
 
-                <li>🚶‍♂️<strong>Service Provision Program: "Balance and Gait Analysis Services"</strong><br>
-                    <em>Movement Learning and Control Laboratory, Department of Physical Education and Sport Science, Special Account for Research Funds, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">🚶‍♂️</span>
+                    <span class="project-title">Balance and Gait Analysis Services</span>
+                    <span class="project-org">Movement Learning and Control Laboratory, Department of Physical Education and Sport Science, Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Developed and implemented advanced gait analysis protocols for clinical and research applications.
+                    </div>
                 </li>
 
-                <li>📘<strong>Author of Specialty Courses</strong> under the auspices of the Greek Ministry of Education, Religious Affairs, and Sports.<br>
-                    <em>Courses:</em> Functional Human Anatomy, Human Physiology, Sports Biomechanics, Exercise: Health and Fitness, Exercise Physiology – Ergometry, Methods of Teaching and Coaching in Developmental Ages, and Circuit and Interval Training.
+                <li>
+                    <span class="project-icon">📘</span>
+                    <span class="project-title">Author of Specialty Courses</span>
+                    <span class="project-org">Greek Ministry of Education, Religious Affairs, and Sports</span>
+                    <div class="project-details">
+                        <strong>Courses Developed:</strong> Functional Human Anatomy, Human Physiology, Sports Biomechanics, Exercise: Health and Fitness, Exercise Physiology – Ergometry, Methods of Teaching and Coaching in Developmental Ages, Circuit and Interval Training.
+                    </div>
                 </li>
 
-                <li>🏃‍♀️<strong>Design, Implementation, and Evaluation of Exercise and Recreation Programs</strong><br>
-                    <em>Special Account for Research Funds, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">🏃‍♀️</span>
+                    <span class="project-title">Design, Implementation, and Evaluation of Exercise and Recreation Programs</span>
+                    <span class="project-org">Special Account for Research Funds, Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Created evidence-based exercise programs tailored for diverse populations and settings.
+                    </div>
                 </li>
 
-                <li>🤾‍♂️<strong>Sports Coaching in Children</strong><br>
-                    <em>Center for Lifelong Learning, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">🤾‍♂️</span>
+                    <span class="project-title">Sports Coaching in Children</span>
+                    <span class="project-org">Center for Lifelong Learning, Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Developed curriculum and training programs for youth sports coaches focusing on developmental appropriateness and injury prevention.
+                    </div>
                 </li>
 
-                <li>📊<strong>European Program for Recording Physical and Athletic Activity using Accelerometers and IMUs</strong><br>
-                    <em>EUVRASMOS-Erasmus+<br>Special Account for Research Funds, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">📊</span>
+                    <span class="project-title">European Program for Recording Physical and Athletic Activity using Accelerometers and IMUs</span>
+                    <span class="project-org">EUVRASMOS-Erasmus+ | Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Pioneered the use of wearable technology for objective measurement of physical activity across European populations.
+                    </div>
                 </li>
 
-                <li>📈 <strong>Program: Promotion of Physical Activity for Health and Social Well-Being through Outdoor Running Events</strong><br>
-                    <em>Erasmus+<br>Special Account for Research Funds, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">📈</span>
+                    <span class="project-title">Promotion of Physical Activity for Health and Social Well-Being through Outdoor Running Events</span>
+                    <span class="project-org">Erasmus+ | Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Designed community-based running programs to enhance public health and social cohesion.
+                    </div>
                 </li>
 
-                <li>🧒 / 👧<strong>Children’s Animation, Recreation, and Exercise</strong><br>
-                    <em>Center for Lifelong Learning, Aristotle University of Thessaloniki</em>
+                <li>
+                    <span class="project-icon">🧒</span>
+                    <span class="project-title">Children's Animation, Recreation, and Exercise</span>
+                    <span class="project-org">Center for Lifelong Learning, Aristotle University of Thessaloniki</span>
+                    <div class="project-details">
+                        Developed innovative movement programs combining play, education, and physical development for children.
+                    </div>
                 </li>
 
-                <li>🖥️<strong>Instructor in the Implementation of Distance Education (Holistic Approach)</strong><br>
-                    <em>University of Western Macedonia, under the auspices of the Greek Ministry of Education, Religious Affairs, and Sports</em>
+                <li>
+                    <span class="project-icon">🖥️</span>
+                    <span class="project-title">Instructor in the Implementation of Distance Education (Holistic Approach)</span>
+                    <span class="project-org">University of Western Macedonia | Greek Ministry of Education</span>
+                    <div class="project-details">
+                        Created comprehensive frameworks for effective distance learning in physical education and health sciences.
+                    </div>
                 </li>
             </ul>
         </section>
     </div>
 </body>
 </html>
-
 
 
 
