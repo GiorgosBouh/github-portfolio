@@ -74,7 +74,7 @@
             <h1>Georgios Bouchouras, PhD</h1>
             <p><strong>Senior Lecturer in Biomechanics</strong></p>
             <p style="font-size: smaller;">Currently at Metropolitan College | University of East London</p>
-            <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Knowledge Graphs | AI | Machine Learning</strong></p>
+            <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</strong></p>
         </header>
 
         <nav>
@@ -256,6 +256,8 @@
                         if (currentPage > 1) {
                             currentPage--;
                             showPage(currentPage);
+                            // Scroll to top of news section
+                            newsSection.scrollIntoView({ behavior: 'smooth' });
                         }
                     });
                     paginationControls.appendChild(prevButton);
@@ -270,6 +272,8 @@
                         pageButton.addEventListener('click', () => {
                             currentPage = i;
                             showPage(currentPage);
+                            // Scroll to top of news section
+                            newsSection.scrollIntoView({ behavior: 'smooth' });
                         });
                         paginationControls.appendChild(pageButton);
                     }
@@ -281,6 +285,8 @@
                         if (currentPage < pageCount) {
                             currentPage++;
                             showPage(currentPage);
+                            // Scroll to top of news section
+                            newsSection.scrollIntoView({ behavior: 'smooth' });
                         }
                     });
                     paginationControls.appendChild(nextButton);
