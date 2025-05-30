@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroCypher ASD SUS - Georgios Bouchouras</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Gallery Layout */
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-row img {
+      width: auto;
+      max-height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-row img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 15px #fff;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo" />
+      <h1>Georgios Bouchouras, PhD</h1>
+      <p><strong>Senior Lecturer in Biomechanics</strong></p>
+      <p style="font-size: smaller;">Metropolitan College, in collaboration with University of East London</p>
+      <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Machine Learning</strong></p>
+    </header>
+
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>🗓 NeuroCypher ASD | APP for ASD Explore and Screening</h1>
+      <p><em>Posted on May 30, 2025</em></p>
+
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <div class="gallery-row">
+          <a href="#img1"><img src="NeuroCypher1.png" alt="NeuroCypher1"></a>
+          <a href="#img2"><img src="NeuroCypher2.png" alt="NeuroCypher2"></a>
+        </div>
+        
+
+        </div>
+      </div>
+
+      <!-- Lightboxes -->
+      <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="NeuroCypher1.png" alt="NeuroCypher1"></div>
+      <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="NeuroCypher2.png" alt="NeuroCypher2"></div>
+    
+
+      <!-- Highlights -->
+      <div class="section">
+        <h2>See our APP and complete the Scale</h2>
+        <p class="date">May 30, 2026</p>
+        <h3>🔍 Explore NeuroCypher ASD — An AI-Powered Intelligent Agent for Autism Screening Support</h3>
+        <p><strong>Access the app:</strong> <a href="http://34.154.218.97:8501" target="_blank">http://34.154.218.97:8501</a></p>
+
+        <p>
+          I'm pleased to introduce <strong>NeuroCypher ASD</strong>, an innovative tool we developed that serves both as a 
+          <strong>screening assistant</strong> and an <strong>intelligent agent</strong> for understanding autism spectrum traits in toddlers. 
+          The system integrates <em>graph-based knowledge</em>, <em>machine learning</em>, and <em>natural language reasoning</em> 
+          to support early detection and decision-making in developmental screening.
+        </p>
+
+        <h3>🤖 What can NeuroCypher ASD do?</h3>
+        <ul>
+          <li>Upload and analyze screening cases using <strong>Q-Chat-10</strong> data and demographic features</li>
+          <li>Generate <strong>graph embeddings</strong> with <em>Node2Vec</em></li>
+          <li>Predict ASD likelihood using a trained <strong>XGBoost</strong> model</li>
+          <li>Detect atypical patterns with <strong>Isolation Forest</strong></li>
+          <li>Explore similar cases via <strong>graph relationships</strong></li>
+          <li>Ask natural language questions and get <strong>instant Cypher-based answers</strong></li>
+          <li>Understand interconnections between screening traits in the graph</li>
+        </ul>
+
+        <h3>🧠 Why use NeuroCypher ASD?</h3>
+        <ul>
+          <li>Functions as an <strong>intelligent agent</strong> powered by knowledge graphs</li>
+          <li>Implements a <strong>Graph-RAG</strong> (Retrieval-Augmented Generation) system</li>
+          <li>Provides <strong>explainable, context-aware predictions</strong></li>
+          <li>Designed for <em>research and educational purposes</em> (not clinical diagnosis)</li>
+        </ul>
+
+        <h3>📨 We need your feedback!</h3>
+        <p>
+          Please try the app and help us improve it by completing a short, anonymous usability survey 
+          based on the System Usability Scale (SUS):
+        </p>
+        <p>
+          📝 <a href="https://forms.office.com/e/21BWBG4c9C" target="_blank"><strong>Click here to complete the survey (2 minutes)</strong></a>
+        </p>
+
+        <hr>
+
+        <p><strong>👨‍💻 Developed by:</strong> Dr. Georgios Bouchouras</p>
+        <p><strong>Collaborators:</strong> Dimitrios Doumanas, MSc and Assoc. Prof. K. Kotis</p>
+        <p><strong>Research Lab:</strong> <a href="https://i-lab.aegean.gr/" target="_blank">Intelligent Systems Research Laboratory (i-Lab), University of the Aegean</a></p>
+      </div>
+
+  
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>
