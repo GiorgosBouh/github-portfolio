@@ -7,7 +7,63 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* Gallery Layout */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .profile-photo {
+      width: 120px;
+      border-radius: 60px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav ul.tabs {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    nav ul.tabs li a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+    }
+
+    .section {
+      background: white;
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: #007acc;
+    }
+
+    .date {
+      font-size: 0.9em;
+      color: #666;
+    }
+
     .image-gallery {
       display: flex;
       flex-direction: column;
@@ -36,7 +92,6 @@
       transform: scale(1.03);
     }
 
-    /* Lightbox */
     .lightbox {
       display: none;
       position: fixed;
@@ -100,62 +155,54 @@
           <a href="#img1"><img src="NeuroCypher1.png" alt="NeuroCypher1"></a>
           <a href="#img2"><img src="NeuroCypher2.png" alt="NeuroCypher2"></a>
         </div>
-        
-
-        </div>
       </div>
 
       <!-- Lightboxes -->
       <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="NeuroCypher1.png" alt="NeuroCypher1"></div>
       <div id="img2" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="NeuroCypher2.png" alt="NeuroCypher2"></div>
-    
 
-        <!-- Highlights -->
-        <div class="section">
-          <h2>Explore NeuroCypher ASD</h2>
-          <p class="date">May 30, 2026</p>
+      <!-- Highlights -->
+      <div class="section">
+        <h2>Explore NeuroCypher ASD</h2>
+        <p class="date">May 30, 2026</p>
 
-          <p><strong>NeuroCypher ASD</strong> is an AI-powered application that functions as both a <strong>screening assistant</strong> and an 
-          <strong>intelligent agent</strong> for detecting autism-related traits in toddlers. It combines <em>graph-based knowledge representation</em>, 
-          <em>machine learning</em>, and <em>natural language processing</em> to support research and educational efforts in early screening.</p>
+        <p><strong>NeuroCypher ASD</strong> is an AI-powered application that functions as both a <strong>screening assistant</strong> and an 
+        <strong>intelligent agent</strong> for detecting autism-related traits in toddlers. It combines <em>graph-based knowledge representation</em>, 
+        <em>machine learning</em>, and <em>natural language processing</em> to support research and educational efforts in early screening.</p>
 
-          <p>🌐 <strong>Access the app:</strong> 
-            <a href="http://34.154.218.97:8501" target="_blank">http://34.154.218.97:8501</a>
-          </p>
+        <p>🌐 <strong>Access the app:</strong> 
+          <a href="http://34.154.218.97:8501" target="_blank">http://34.154.218.97:8501</a>
+        </p>
 
-          <h3>Key Features:</h3>
-          <ul>
-            <li>Upload and analyze Q-Chat-10 and demographic screening data</li>
-            <li>Generate graph embeddings using <em>Node2Vec</em></li>
-            <li>Predict ASD likelihood using a trained <strong>XGBoost</strong> model</li>
-            <li>Detect anomalies using <strong>Isolation Forest</strong></li>
-            <li>Identify similar cases through graph-based connections</li>
-            <li>Ask natural language questions and receive Cypher-based answers</li>
-            <li>Visualize how traits and cases are interconnected in a knowledge graph</li>
-          </ul>
+        <h3>Key Features:</h3>
+        <ul>
+          <li>Upload and analyze Q-Chat-10 and demographic screening data</li>
+          <li>Generate graph embeddings using <em>Node2Vec</em></li>
+          <li>Predict ASD likelihood using a trained <strong>XGBoost</strong> model</li>
+          <li>Detect anomalies using <strong>Isolation Forest</strong></li>
+          <li>Identify similar cases through graph-based connections</li>
+          <li>Ask natural language questions and receive Cypher-based answers</li>
+          <li>Visualize how traits and cases are interconnected in a knowledge graph</li>
+        </ul>
 
-          <h3>Why Use It?</h3>
-          <ul>
-            <li>Acts as an <strong>intelligent agent</strong> powered by AI and graphs</li>
-            <li>Implements a <strong>Graph-RAG</strong> (Retrieval-Augmented Generation) architecture</li>
-            <li>Provides explainable, context-aware outputs</li>
-            <li>Designed strictly for <em>research and educational purposes</em></li>
-          </ul>
+        <h3>Why Use It?</h3>
+        <ul>
+          <li>Acts as an <strong>intelligent agent</strong> powered by AI and graphs</li>
+          <li>Implements a <strong>Graph-RAG</strong> (Retrieval-Augmented Generation) architecture</li>
+          <li>Provides explainable, context-aware outputs</li>
+          <li>Designed strictly for <em>research and educational purposes</em></li>
+        </ul>
 
-          <p>
-            📝 <strong>Help us improve:</strong> Try the app and complete the short, anonymous usability survey (SUS):<br>
-            <a href="https://forms.office.com/e/21BWBG4c9C" target="_blank">https://forms.office.com/e/21BWBG4c9C</a>
-          </p>
+        <p>
+          📝 <strong>Help us improve:</strong> Try the app and complete the short, anonymous usability survey (SUS):<br>
+          <a href="https://forms.office.com/e/21BWBG4c9C" target="_blank">https://forms.office.com/e/21BWBG4c9C</a>
+        </p>
 
-          <p>
-            👨‍💻 <strong>Developed by:</strong> Dr. Georgios Bouchouras<br>
-            🤝 <strong>Collaborators:</strong> Dimitrios Doumanas, MSc and Assoc. Prof. K. Kotis<br>
-            🧪 <strong>Research Lab:</strong> <a href="https://i-lab.aegean.gr/" target="_blank">Intelligent Systems Research Laboratory (i-Lab), University of the Aegean</a>
-          </p>
-</div>
-
-  
-
+        <p>
+          👨‍💻 <strong>Developed by:</strong> Dr. Georgios Bouchouras<br>
+          🤝 <strong>Collaborators:</strong> Dimitrios Doumanas, MSc and Assoc. Prof. K. Kotis<br>
+          🧪 <strong>Research Lab:</strong> <a href="https://i-lab.aegean.gr/" target="_blank">Intelligent Systems Research Laboratory (i-Lab), University of the Aegean</a>
+        </p>
       </div>
     </section>
   </div>
