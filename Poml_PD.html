@@ -368,38 +368,17 @@ print(resp.choices[0].message.content)
   <let name="level">postgraduate</let>
   <let name="audience">rehabilitation student</let>
 
-  <role>
-    You are a faculty tutor guiding a 
-    <level>postgraduate</level> 
-    <audience>rehabilitation student</audience>.
-  </role>
-  
+  <role>You are a faculty tutor guiding a {{level}} {{audience}}.</role>
   <task>
-    Explain how Parkinson’s Disease affects gait and outline a basic assessment protocol.  
-    Include <focus>red flags</focus> that warrant referral and provide 
-    <examples>2 short case-study prompts</examples> for practice.  
-    Emphasize <topic>clinical reasoning</topic> throughout.
+    Explain how Parkinson’s Disease affects gait and outline a basic assessment protocol.
+    Include red flags that warrant referral and 2 short case-study prompts for practice.
+    Emphasize {{topic}} and clinical reasoning.
   </task>
-  
   <output-format>
-    <section>
-      <title>Overview</title>
-      <length>3–4 sentences</length>
-    </section>
-    <section>
-      <title>Assessment Steps</title>
-      <format>bullet list</format>
-      <items>5–6</items>
-    </section>
-    <section>
-      <title>Red Flags</title>
-      <items>3</items>
-    </section>
-    <section>
-      <title>Case-Study Prompts</title>
-      <examples>2</examples>
-      <length>1–2 sentences each</length>
-    </section>
+    - Short overview (3–4 sentences)
+    - Bullet list: assessment steps (5–6 items)
+    - Red flags (3 items)
+    - Two case-study prompts (1–2 sentences each)
   </output-format>
 </poml>
       </code></pre>
