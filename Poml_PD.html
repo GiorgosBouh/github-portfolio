@@ -137,59 +137,59 @@
         <div class="section">
                 <h2>Why this is different form plain xml or json?</h2>
                   <p>POML helps teams manage large prompt libraries with clearer structure, reuse, and multimodal support, while tooling like IDE extensions and SDKs speeds up development. Many see it as a step toward treating prompt engineering more like software engineering, even if models themselves don’t inherently “understand” it—the real benefit lies in helping developers stay organized and scale their work. More than just markup, POML represents an effort to standardize and professionalize prompt design, and in a modest way, it may also shape the future of education by making AI interactions more structured, transparent, and accessible to learners and teachers alike</p>
-                <h3>XML vs JSON vs POML</h3>
-                <table border="1" cellpadding="6" cellspacing="0">
-                  <tr>
-                    <th>Aspect</th>
-                    <th>XML</th>
-                    <th>JSON</th>
-                    <th>POML</th>
-                  </tr>
-                  <tr>
-                    <td><b>Structure</b></td>
-                    <td>Generic hierarchical tags</td>
-                    <td>Key–value pairs, lightweight</td>
-                    <td>XML-like tags with a defined schema for prompts</td>
-                  </tr>
-                  <tr>
-                    <td><b>Semantics</b></td>
-                    <td>No built-in meaning (custom-defined)</td>
-                    <td>No built-in meaning (custom-defined)</td>
-                    <td>Prompt-specific tags like &lt;role&gt;, &lt;task&gt;, &lt;output-format&gt;</td>
-                  </tr>
-                  <tr>
-                    <td><b>Templating & Logic</b></td>
-                    <td>Not standardized</td>
-                    <td>Possible but ad-hoc</td>
-                    <td>Built-in: variables, loops, conditionals</td>
-                  </tr>
-                  <tr>
-                    <td><b>Styling</b></td>
-                    <td>Not built-in</td>
-                    <td>Not built-in</td>
-                    <td>CSS-like styling, separates content from presentation</td>
-                  </tr>
-                  <tr>
-                    <td><b>Multimodal Support</b></td>
-                    <td>Possible via custom tags</td>
-                    <td>Possible via custom fields</td>
-                    <td>Native tags for documents, images, tables</td>
-                  </tr>
-                  <tr>
-                    <td><b>Tooling</b></td>
-                    <td>Generic XML tools</td>
-                    <td>Generic JSON tools</td>
-                    <td>VS Code extension, SDKs, live preview, debugging</td>
-                  </tr>
-                  <tr>
-                    <td><b>Use Case</b></td>
-                    <td>Any structured data</td>
-                    <td>APIs, configs, data exchange</td>
-                    <td>Prompt engineering, LLM workflows</td>
-                  </tr>
-                </table>
+                  <h3>XML vs JSON vs POML</h3>
+                  <table border="1" cellpadding="6" cellspacing="0">
+                    <tr>
+                      <th>Aspect</th>
+                      <th>XML</th>
+                      <th>JSON</th>
+                      <th>POML</th>
+                    </tr>
+                    <tr>
+                      <td><b>Structure</b></td>
+                      <td>Generic hierarchical tags</td>
+                      <td>Key–value pairs, lightweight</td>
+                      <td>XML-like syntax tailored for prompts</td>
+                    </tr>
+                    <tr>
+                      <td><b>Semantics</b></td>
+                      <td>No fixed semantics, user-defined</td>
+                      <td>No fixed semantics, user-defined</td>
+                      <td>Predefined prompt tags (<code>&lt;role&gt;</code>, <code>&lt;task&gt;</code>, etc.)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Templating & Logic</b></td>
+                      <td>Possible via external frameworks</td>
+                      <td>Possible via external frameworks</td>
+                      <td>Built-in support for variables, loops, conditionals</td>
+                    </tr>
+                    <tr>
+                      <td><b>Styling</b></td>
+                      <td>Not built-in (can be layered)</td>
+                      <td>Not built-in (can be layered)</td>
+                      <td>CSS-like system for tone/verbosity (optional)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Multimodal Support</b></td>
+                      <td>Can embed media/links via custom tags</td>
+                      <td>Can embed media/links via custom fields</td>
+                      <td>Provides standard tags (<code>&lt;img&gt;</code>, <code>&lt;document&gt;</code>, etc.)</td>
+                    </tr>
+                    <tr>
+                      <td><b>Tooling</b></td>
+                      <td>Generic XML parsers/editors</td>
+                      <td>Generic JSON parsers/editors</td>
+                      <td>VS Code extension, SDKs, live preview, diagnostics</td>
+                    </tr>
+                    <tr>
+                      <td><b>Use Case</b></td>
+                      <td>Any structured data</td>
+                      <td>APIs, configs, data exchange</td>
+                      <td>Prompt engineering and LLM workflows</td>
+                    </tr>
+                  </table>
 
-                <p><i>Caption: This table highlights how XML and JSON are general-purpose formats, while POML is a domain-specific markup language designed to add structure, semantics, and tooling support to prompt engineering.</i></p>
+                  <p><i>Caption: XML and JSON can already represent structured data and even prompts, but POML standardizes a schema and provides dedicated tooling aimed specifically at Large Language Model workflows.</i></p>
                                 </div>
 
 
