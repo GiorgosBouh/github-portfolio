@@ -281,7 +281,7 @@ api_key = os.getenv("OPENAI_API_KEY", "").strip()
 if not api_key:
     raise RuntimeError("OPENAI_API_KEY is not set. Run: export OPENAI_API_KEY='sk-...'")
 if any(ord(c) > 127 for c in api_key):
-    raise ValueError("OPENAI_API_KEY contains non-ASCII characters. Please re-paste it cleanly.")
+    raise ValueError("OPENAI_API_KEY is not valid")
 
 client = OpenAI(api_key=api_key)
 
