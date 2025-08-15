@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="Latest News - Giorgos Bouhouras" />
+  <meta property="og:description" content="Updates and events from Giorgos Bouhouras." />
+  <meta property="og:image" content="https://giorgosbouh.github.io/github-portfolio/pic_kg_ai_2.png"/>
+  <meta property="og:url" content="https://giorgosbouh.github.io/github-portfolio/AI_KG_rehab_centres.html" />
+  <meta property="og:type" content="website" />
+  <title>AI + Knowledge Graph (+Ontologies): The New Standard in Rehabilitation</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Gallery Layout */
+    .image-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .gallery-row img {
+      width: auto;
+      max-height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-row img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 15px #fff;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo" />
+      <h1>Georgios Bouchouras, PhD</h1>
+      <p><strong>Senior Lecturer in Biomechanics</strong></p>
+      <p style="font-size: smaller;">Metropolitan College, in collaboration with University of East London</p>
+      <p><strong>Biomechanics | Gait Analysis | Ontology Engineer | Prompt Engineer | AI | Recurrent Neural Networks</strong></p>
+    </header>
+
+    <nav>
+      <ul class="tabs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>POML (Prompt Orchestration Markup Language): Bringing Modularity and Scalability to LLM Prompts</h1>
+      <p><em>Posted on August 15, 2025</em></p>
+
+      <!-- Image Gallery -->
+      <div class="image-gallery">
+        <div class="gallery-row">
+          <a href="#img1"><img src="pic_kg_ai_2.png" alt="pic_kg_ai_2"></a>
+
+        </div>
+      </div>
+
+      <!-- Lightboxes -->
+      <div id="img1" class="lightbox"><a href="#" class="lightbox-close">&times;</a><img src="pic_kg_ai_2.png" alt="pic_kg_ai_2"></div>
+     
+
+
+      <div class="section">
+        <h2>What is POML?</h2>
+         <ul>
+          <li>► Is Microsoft’s new XML/HTML-like language designed to bring structure and clarity to prompt engineering for Large Language Models (LLMs)./li>
+          <li>► It organizes prompts into modular, reusable components, making them easier to maintain and adapt at scale</li>
+        </div>
+
+      <div class="section">
+        <h2>What’s Novel About It?</h2>
+         <ul>
+        <li>Structured Syntax: Semantic tags like <role>, <task>, and <example> allow developers to break down complex prompts into well-defined sections.
+        <li>Data embedding: Direct support for including documents, tables, and images (<document>, <table>, <img>), enabling richer multimodal prompts.</li>
+        <li>Separation of Content and Style: CSS-like styling lets you adjust tone, verbosity, or formatting without rewriting the core prompt.</li>
+        <li>Templating Logic: Built-in support for variables (<let>), loops (for), and conditionals (if) provides dynamic prompt generation.</li>
+        <li>Tooling Ecosystem: VS Code Extension: syntax highlighting, auto-completion, previews, and diagnostics. SDKs for Node.js and Python: easy integration into real applications.</li>
+      </div>
+      
+         <div class="section">
+        <h2>Education is changing</h2>
+          <p>POML helps teams manage large prompt libraries with clearer structure, reuse, and multimodal support, while tooling like IDE extensions and SDKs speeds up development. Many see it as a step toward treating prompt engineering more like software engineering, even if models themselves don’t inherently “understand” it—the real benefit lies in helping developers stay organized and scale their work. More than just markup, POML represents an effort to standardize and professionalize prompt design, and in a modest way, it may also shape the future of education by making AI interactions more structured, transparent, and accessible to learners and teachers alike</p>
+        </div>
+         
+        <div class="section">
+        <h2>Example: POML in Action</h2>
+
+          <p>
+          Below is a simple <code>.poml</code> file describing a prompt from my domain about Parkinson’s Disease,
+          and a Python script that loads it, renders it into a prompt string, and sends it to OpenAI’s API.
+          </p>
+
+          <h3><code>pd_poml.xml</code></h3>
+          <pre><code class="language-xml">
+          <poml>
+            <role>You are a medical expert explaining Parkinson’s Disease.</role>
+            <task>Explain the main symptoms of Parkinson’s Disease to a first-year medical student.</task>
+            <output-format>Use clear language. Provide 4 bullet points. End with one short sentence about why early diagnosis matters.</output-format>
+          </poml>
+          </code></pre>
+
+          <h3><code>run_poml.py</code></h3>
+          <pre><code class="language-python">
+          import os
+          import xml.etree.ElementTree as ET
+          from openai import OpenAI
+
+          # Path to your POML (XML) file
+          POML_PATH = "/home/ilab/test.pml/pd_poml.xml"
+
+          # --- Parse POML (XML) ---
+          root = ET.parse(POML_PATH).getroot()
+
+          def text(tag):
+              el = root.find(tag)
+              return (el.text if el is not None and el.text else "").strip()
+
+          role = text("role")
+          task = text("task")
+          outfmt = text("output-format")
+
+          # Build prompt string
+          parts = []
+          if role:   parts.append(role)
+          if task:   parts.append(f"\\nTASK:\\n{task}")
+          if outfmt: parts.append(f"\\nOUTPUT FORMAT:\\n{outfmt}")
+          prompt = "\\n".join(parts).strip()
+
+          # --- OpenAI API ---
+          api_key = os.getenv("OPENAI_API_KEY", "").strip()
+          if not api_key:
+              raise RuntimeError("OPENAI_API_KEY is not set. Run: export OPENAI_API_KEY='sk-...'")
+
+          client = OpenAI(api_key=api_key)
+
+          resp = client.chat.completions.create(
+              model="gpt-4o-mini",
+              messages=[{"role": "user", "content": prompt}],
+          )
+
+          print("=== POML Prompt Output ===")
+          print(resp.choices[0].message.content)
+          </code></pre>
+                  
+<p>
+<i>Information adapted from <a href="https://www.marktechpost.com/2025/08/13/microsoft-releases-poml-prompt-orchestration-markup-language/" target="_blank">MarkTechPost</a>. Special thanks to Associate Professor Dr. Kotis for bringing this to my attention.</i>
+</p>
+
+    </section>
+  </div>
+</body>
+</html>
