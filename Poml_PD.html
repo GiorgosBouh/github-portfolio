@@ -354,7 +354,31 @@ print(resp.choices[0].message.content)
   </p>
 
 </div>
-      
+<div class="code-container">
+    <div class="code-scroll">
+      <pre><code class="language-xml">
+<poml>
+  <let name="topic">PD gait assessment</let>
+  <let name="level">postgraduate</let>
+  <let name="audience">rehabilitation student</let>
+
+  <role>You are a faculty tutor guiding a {{level}} {{audience}}.</role>
+  <task>
+    Explain how Parkinson’s Disease affects gait and outline a basic assessment protocol.
+    Include red flags that warrant referral and 2 short case-study prompts for practice.
+    Emphasize {{topic}} and clinical reasoning.
+  </task>
+  <output-format>
+    - Short overview (3–4 sentences)
+    - Bullet list: assessment steps (5–6 items)
+    - Red flags (3 items)
+    - Two case-study prompts (1–2 sentences each)
+  </output-format>
+</poml>
+      </code></pre>
+    </div>
+  </div>
+  
       </p><i>Information adapted from <a href="https://www.marktechpost.com/2025/08/13/microsoft-releases-poml-prompt-orchestration-markup-language/" target="_blank">MarkTechPost</a>.</i></p>
         </p><i>The examples, implementations and comparisons in this article are created by me and reflect my opinion only.</i>
         </p><i>Special thanks to Associate Professor Dr. Kotis for bringing this to my attention.</i></p>
