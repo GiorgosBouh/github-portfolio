@@ -217,47 +217,80 @@
           </code></pre>
 
           <h3><code>run_poml.py</code></h3>
-          <pre><code class="language-python">
-          import os
-          import xml.etree.ElementTree as ET
-          from openai import OpenAI
+         <style>
+  /* Reusable responsive code block */
+  .code-container {
+    margin: 1rem 0;
+    background: #0f172a;          /* dark slate */
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    overflow: hidden;
+  }
+  .code-scroll {
+    overflow-x: auto;              /* horizontal scroll on small screens */
+    -webkit-overflow-scrolling: touch;
+  }
+  .code-scroll pre {
+    margin: 0;
+    padding: 1rem 1.25rem;
+    color: #e5e7eb;                /* light text */
+    background: transparent;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: clamp(12px, 1.6vw, 14px); /* responsive font size */
+    line-height: 1.6;
+    white-space: pre;              /* preserve formatting */
+  }
+  /* Optional: make long words (e.g., paths) wrap if you prefer no horizontal scroll */
+  /* .code-scroll pre { white-space: pre-wrap; word-break: break-word; } */
+</style>
 
-          # Path to your POML (XML) file
-          POML_PATH = "/home/ilab/test.pml/pd_poml.xml"
+<div class="code-container">
+  <div class="code-scroll">
+    <pre><code class="language-python">
+import os
+import xml.etree.ElementTree as ET
+from openai import OpenAI
 
-          # --- Parse POML (XML) ---
-          root = ET.parse(POML_PATH).getroot()
+# Path to your POML (XML) file
+POML_PATH = "/home/ilab/test.pml/pd_poml.xml"
 
-          def text(tag):
-              el = root.find(tag)
-              return (el.text if el is not None and el.text else "").strip()
+# --- Parse POML (XML) ---
+root = ET.parse(POML_PATH).getroot()
 
-          role = text("role")
-          task = text("task")
-          outfmt = text("output-format")
+def text(tag):
+    el = root.find(tag)
+    return (el.text if el is not None and el.text else "").strip()
 
-          # Build prompt string
-          parts = []
-          if role:   parts.append(role)
-          if task:   parts.append(f"\\nTASK:\\n{task}")
-          if outfmt: parts.append(f"\\nOUTPUT FORMAT:\\n{outfmt}")
-          prompt = "\\n".join(parts).strip()
+role = text("role")
+task = text("task")
+outfmt = text("output-format")
 
-          # --- OpenAI API ---
-          api_key = os.getenv("OPENAI_API_KEY", "").strip()
-          if not api_key:
-              raise RuntimeError("OPENAI_API_KEY is not set. Run: export OPENAI_API_KEY='sk-...'")
+# Build prompt string
+parts = []
+if role:   parts.append(role)
+if task:   parts.append(f"\nTASK:\n{task}")
+if outfmt: parts.append(f"\nOUTPUT FORMAT:\n{outfmt}")
+prompt = "\n".join(parts).strip()
 
-          client = OpenAI(api_key=api_key)
+# --- OpenAI API ---
+api_key = os.getenv("OPENAI_API_KEY", "").strip()
+if not api_key:
+    raise RuntimeError("OPENAI_API_KEY is not set. Run: export OPENAI_API_KEY='sk-...'")
+if any(ord(c) > 127 for c in api_key):
+    raise ValueError("OPENAI_API_KEY contains non-ASCII characters. Please re-paste it cleanly.")
 
-          resp = client.chat.completions.create(
-              model="gpt-4o-mini",
-              messages=[{"role": "user", "content": prompt}],
-          )
+client = OpenAI(api_key=api_key)
 
-          print("=== POML Prompt Output ===")
-          print(resp.choices[0].message.content)
-          </code></pre>
+resp = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": prompt}],
+)
+
+print("=== POML Prompt Output ===")
+print(resp.choices[0].message.content)
+    </code></pre>
+  </div>
+</div>
                   
         </p><i>Note: From my experience so far, while a Python library (<code>pip install poml</code>) exists, it is not yet as mature or fully featured as the official Node.js package (<code>pomljs</code>). At this stage, I found the Node.js SDK to be more complete for practical use, whereas in Python I had to rely on XML parsing as a workaround.</i></p>
         </p><i>Information adapted from <a href="https://www.marktechpost.com/2025/08/13/microsoft-releases-poml-prompt-orchestration-markup-language/" target="_blank">MarkTechPost</a>.</i></p>
