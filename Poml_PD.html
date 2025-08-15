@@ -138,56 +138,62 @@
                 <h2>Why this is different from plain xml or json?</h2>
                   <p>POML helps teams manage large prompt libraries with clearer structure, reuse, and multimodal support, while tooling like IDE extensions and SDKs speeds up development. Many see it as a step toward treating prompt engineering more like software engineering, even if models themselves don’t inherently “understand” it—the real benefit lies in helping developers stay organized and scale their work. More than just markup, POML represents an effort to standardize and professionalize prompt design, and in a modest way, it may also shape the future of education by making AI interactions more structured, transparent, and accessible to learners and teachers alike</p>
                   <h3>XML vs JSON vs POML</h3>
-                  <table border="1" cellpadding="6" cellspacing="0">
-                    <tr>
-                      <th>Aspect</th>
-                      <th>XML</th>
-                      <th>JSON</th>
-                      <th>POML</th>
-                    </tr>
-                    <tr>
-                      <td><b>Structure</b></td>
-                      <td>Generic hierarchical tags</td>
-                      <td>Key–value pairs, lightweight</td>
-                      <td>XML-like syntax tailored for prompts</td>
-                    </tr>
-                    <tr>
-                      <td><b>Semantics</b></td>
-                      <td>No fixed semantics, user-defined</td>
-                      <td>No fixed semantics, user-defined</td>
-                      <td>Predefined prompt tags (<code>&lt;role&gt;</code>, <code>&lt;task&gt;</code>, etc.)</td>
-                    </tr>
-                    <tr>
-                      <td><b>Templating & Logic</b></td>
-                      <td>Possible via external frameworks</td>
-                      <td>Possible via external frameworks</td>
-                      <td>Built-in support for variables, loops, conditionals</td>
-                    </tr>
-                    <tr>
-                      <td><b>Styling</b></td>
-                      <td>Not built-in (can be layered)</td>
-                      <td>Not built-in (can be layered)</td>
-                      <td>CSS-like system for tone/verbosity (optional)</td>
-                    </tr>
-                    <tr>
-                      <td><b>Multimodal Support</b></td>
-                      <td>Can embed media/links via custom tags</td>
-                      <td>Can embed media/links via custom fields</td>
-                      <td>Provides standard tags (<code>&lt;img&gt;</code>, <code>&lt;document&gt;</code>, etc.)</td>
-                    </tr>
-                    <tr>
-                      <td><b>Tooling</b></td>
-                      <td>Generic XML parsers/editors</td>
-                      <td>Generic JSON parsers/editors</td>
-                      <td>VS Code extension, SDKs, live preview, diagnostics</td>
-                    </tr>
-                    <tr>
-                      <td><b>Use Case</b></td>
-                      <td>Any structured data</td>
-                      <td>APIs, configs, data exchange</td>
-                      <td>Prompt engineering and LLM workflows</td>
-                    </tr>
+                 <div style="overflow-x:auto; margin: 1em 0;">
+                  <table style="width:100%; border-collapse: collapse; text-align:left;">
+                    <thead>
+                      <tr style="background:#f2f2f2;">
+                        <th style="padding:8px; border:1px solid #ccc;">Aspect</th>
+                        <th style="padding:8px; border:1px solid #ccc;">XML</th>
+                        <th style="padding:8px; border:1px solid #ccc;">JSON</th>
+                        <th style="padding:8px; border:1px solid #ccc;">POML</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Structure</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Generic hierarchical tags</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Key–value pairs, lightweight</td>
+                        <td style="padding:8px; border:1px solid #ccc;">XML-like syntax tailored for prompts</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Semantics</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">No fixed semantics, user-defined</td>
+                        <td style="padding:8px; border:1px solid #ccc;">No fixed semantics, user-defined</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Predefined prompt tags (<code>&lt;role&gt;</code>, <code>&lt;task&gt;</code>, etc.)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Templating & Logic</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Possible via external frameworks</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Possible via external frameworks</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Built-in support for variables, loops, conditionals</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Styling</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Not built-in (can be layered)</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Not built-in (can be layered)</td>
+                        <td style="padding:8px; border:1px solid #ccc;">CSS-like system for tone/verbosity (optional)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Multimodal Support</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Custom tags for media/links</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Custom fields for media/links</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Standard tags (<code>&lt;img&gt;</code>, <code>&lt;document&gt;</code>, etc.)</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Tooling</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Generic XML parsers/editors</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Generic JSON parsers/editors</td>
+                        <td style="padding:8px; border:1px solid #ccc;">VS Code extension, SDKs, live preview, diagnostics</td>
+                      </tr>
+                      <tr>
+                        <td style="padding:8px; border:1px solid #ccc;"><b>Use Case</b></td>
+                        <td style="padding:8px; border:1px solid #ccc;">Any structured data</td>
+                        <td style="padding:8px; border:1px solid #ccc;">APIs, configs, data exchange</td>
+                        <td style="padding:8px; border:1px solid #ccc;">Prompt engineering & LLM workflows</td>
+                      </tr>
+                    </tbody>
                   </table>
+                </div>
 
                   <p><i>XML and JSON can already represent structured data and even prompts, but POML standardizes a schema and provides dedicated tooling aimed specifically at Large Language Model workflows.</i></p>
                                 </div>
