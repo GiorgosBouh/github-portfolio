@@ -22,24 +22,34 @@
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    /* ---------- MEDIA COLUMN (THUMBNAILS) ---------- */
-    .col-media .media-block {
-      margin-bottom: 1.2rem;
-      background: #fafafa;
-      border: 1px solid #e6e6e6;
-      border-radius: 10px;
-      padding: 10px;
+    /* ---------- GRID THUMBNAILS ---------- */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
     }
 
-    .col-media .media-block img {
+    @media (max-width: 768px) {
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .media-thumb {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      padding: 8px;
+    }
+
+    .media-thumb img {
       width: 100%;
-      height: auto;
-      max-height: 320px;
-      object-fit: contain;     /* 👈 THIS IS THE KEY */
+      height: 180px;
+      object-fit: contain; /* 👈 NO CROP */
       display: block;
-      cursor: zoom-in;
       background: #fff;
       border-radius: 6px;
+      cursor: zoom-in;
     }
 
     /* ---------- LIGHTBOX ---------- */
@@ -106,52 +116,52 @@
   <p><em>Posted on February 04, 2026</em></p>
 
   <p>
-A highly successful <strong>3-hour hands-on workshop on gait analysis</strong> was recently completed at the Center for Interdisciplinary Education and Research in Rehabilitation (CIDERR) of Metropolitan College.
+A highly successful <strong>3-hour hands-on workshop on gait analysis</strong> was recently completed
+at the Center for Interdisciplinary Education and Research in Rehabilitation (CIDERR) of Metropolitan College.
 </p>
 
   <p>
-The workshop brought together <strong>students and professionals</strong> from the fields of
+The workshop brought together <strong>students and professionals</strong> from
 <strong>Physiotherapy, Occupational Therapy, and Podiatry</strong>, creating a truly interdisciplinary
 learning environment focused on clinical movement analysis.
 </p>
 
   <p>
-Participants engaged in applied gait assessment, biomechanical interpretation, and real-world
-clinical scenarios, bridging theoretical concepts with hands-on experience.
-</p>
-
-  <p>
 As part of the hands-on experience, participants were introduced to a custom-developed
-<strong>gait analysis software platform developed by me</strong>, designed to support markerless motion
-analysis and clinical interpretation using modern computer vision techniques.
+<strong>gait analysis software platform developed by me</strong>, designed to support markerless
+motion analysis and clinical interpretation using modern computer vision techniques.
 </p>
 
   <p>
-The platform is available online at:
+The platform is available at:
 <a href="https://giorgosbouh.github.io/gait_analysis_mediapipe/" target="_blank">
 https://giorgosbouh.github.io/gait_analysis_mediapipe/
 </a>
 </p>
 </div>
 
-<!-- IMAGES -->
+<!-- GRID IMAGES -->
 <div class="col-media">
-  <div class="media-block">
-    <a href="#img1">
-      <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop">
-    </a>
-  </div>
+  <div class="media-grid">
 
-  <div class="media-block">
-    <a href="#img2">
-      <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
-    </a>
-  </div>
+    <div class="media-thumb">
+      <a href="#img1">
+        <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop">
+      </a>
+    </div>
 
-  <div class="media-block">
-    <a href="#img3">
-      <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
-    </a>
+    <div class="media-thumb">
+      <a href="#img2">
+        <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
+      </a>
+    </div>
+
+    <div class="media-thumb">
+      <a href="#img3">
+        <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
+      </a>
+    </div>
+
   </div>
 </div>
 
