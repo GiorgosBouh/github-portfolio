@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-863PDW5W9Q"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,80 +17,59 @@
   <meta property="og:image" content="https://giorgosbouh.github.io/github-portfolio/gait_analysis_2_2.jpg"/>
   <meta property="og:url" content="https://giorgosbouh.github.io/github-portfolio/Gait_analysis_seminar.html" />
   <meta property="og:type" content="website" />
-  <title>Gait analysis semianar</title>
+  <title>Gait analysis seminar</title>
+
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    .image-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .gallery-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .gallery-row img {
-      width: auto;
-      max-height: 300px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-    .gallery-row img:hover {
-      transform: scale(1.03);
-    }
-    .end-photo{
-      display: block;
-      margin-top: 2rem;
-      width: 100%;
-    }
-    .end-photo img{
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      cursor: zoom-in;
+    /* ---------- MEDIA COLUMN (THUMBNAILS) ---------- */
+    .col-media .media-block {
+      margin-bottom: 1.2rem;
+      background: #fafafa;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      padding: 10px;
     }
 
-    /* Editorial look + click to enlarge */
     .col-media .media-block img {
       width: 100%;
-      max-height: 260px;
-      object-fit: cover;
+      height: auto;
+      max-height: 320px;
+      object-fit: contain;     /* 👈 THIS IS THE KEY */
       display: block;
-      border-radius: 8px;
       cursor: zoom-in;
+      background: #fff;
+      border-radius: 6px;
     }
 
-    /* Lightbox */
+    /* ---------- LIGHTBOX ---------- */
     .lightbox {
       display: none;
       position: fixed;
-      z-index: 999;
       inset: 0;
       background: rgba(0,0,0,0.85);
+      z-index: 999;
       justify-content: center;
       align-items: center;
     }
+
     .lightbox:target {
       display: flex;
     }
+
     .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+      max-width: 92%;
+      max-height: 92%;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
     }
+
     .lightbox-close {
       position: absolute;
-      top: 30px;
+      top: 28px;
       right: 40px;
-      font-size: 32px;
+      font-size: 34px;
       color: white;
       text-decoration: none;
       font-weight: bold;
@@ -100,6 +79,7 @@
 
 <body>
 <div class="container">
+
 <header>
   <img src="profile.jpg" alt="Georgios Bouchouras" class="profile-photo" />
   <h1>Georgios Bouchouras, PhD</h1>
@@ -120,6 +100,7 @@
 <div class="section">
 <div class="two-col">
 
+<!-- TEXT -->
 <div class="col-text">
   <h2>Hands-on Gait Analysis Workshop: From Theory to Clinical Practice</h2>
   <p><em>Posted on February 04, 2026</em></p>
@@ -129,53 +110,47 @@ A highly successful <strong>3-hour hands-on workshop on gait analysis</strong> w
 </p>
 
   <p>
-The workshop brought together <strong>students and professionals</strong> from the fields of <strong>Physiotherapy, Occupational Therapy, and Podiatry</strong>, creating a truly interdisciplinary learning environment focused on clinical movement analysis.
+The workshop brought together <strong>students and professionals</strong> from the fields of
+<strong>Physiotherapy, Occupational Therapy, and Podiatry</strong>, creating a truly interdisciplinary
+learning environment focused on clinical movement analysis.
 </p>
 
   <p>
-Participants engaged in applied gait assessment, biomechanical interpretation, and real-world clinical scenarios, bridging theoretical concepts with hands-on experience. Emphasis was placed on observation, data-driven reasoning, and clinical decision-making in gait evaluation.
+Participants engaged in applied gait assessment, biomechanical interpretation, and real-world
+clinical scenarios, bridging theoretical concepts with hands-on experience.
 </p>
 
   <p>
 As part of the hands-on experience, participants were introduced to a custom-developed
-<strong>gait analysis software platform developed by me</strong>, designed to support markerless
-motion analysis and clinical interpretation using modern computer vision techniques. The platform
-was demonstrated live and explored by students as a practical tool for translating movement data
-into clinically meaningful insights.
+<strong>gait analysis software platform developed by me</strong>, designed to support markerless motion
+analysis and clinical interpretation using modern computer vision techniques.
 </p>
 
   <p>
-The software platform presented during the workshop is available online at:
-<a href="https://giorgosbouh.github.io/gait_analysis_mediapipe/" target="_blank" rel="noopener noreferrer">
+The platform is available online at:
+<a href="https://giorgosbouh.github.io/gait_analysis_mediapipe/" target="_blank">
 https://giorgosbouh.github.io/gait_analysis_mediapipe/
 </a>
 </p>
-
-  <p>
-The strong engagement, active participation, and quality of discussion throughout the session highlighted the growing demand for <strong>applied biomechanics education</strong> that directly connects research, clinical practice, and professional training.
-</p>
-
-  <p>
-Initiatives like this reflect CIDERR’s mission to provide high-impact educational experiences while fostering collaboration across rehabilitation disciplines, supporting both academic development and clinical excellence.
-</p>
 </div>
 
+<!-- IMAGES -->
 <div class="col-media">
   <div class="media-block">
-    <a href="#img1" aria-label="Enlarge photo 1">
-      <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop session" loading="lazy">
+    <a href="#img1">
+      <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop">
     </a>
   </div>
 
   <div class="media-block">
-    <a href="#img2" aria-label="Enlarge photo 2">
-      <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training" loading="lazy">
+    <a href="#img2">
+      <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
     </a>
   </div>
 
   <div class="media-block">
-    <a href="#img3" aria-label="Enlarge photo 3">
-      <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education" loading="lazy">
+    <a href="#img3">
+      <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
     </a>
   </div>
 </div>
@@ -183,20 +158,20 @@ Initiatives like this reflect CIDERR’s mission to provide high-impact educatio
 </div>
 </div>
 
-<!-- Lightbox overlays -->
+<!-- LIGHTBOXES -->
 <div id="img1" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop session">
+  <a href="#" class="lightbox-close">×</a>
+  <img src="gait_analysis_2_2.jpg">
 </div>
 
 <div id="img2" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
+  <a href="#" class="lightbox-close">×</a>
+  <img src="gait_analysis_4_2.jpg">
 </div>
 
 <div id="img3" class="lightbox">
-  <a href="#" class="lightbox-close" aria-label="Close">×</a>
-  <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
+  <a href="#" class="lightbox-close">×</a>
+  <img src="git_analysis_3_2.jpg">
 </div>
 
 </div>
