@@ -58,13 +58,42 @@
       cursor: zoom-in;
     }
 
-    /* FIX: keep media images inside column and give them a clean editorial look */
+    /* Editorial look + click to enlarge */
     .col-media .media-block img {
       width: 100%;
       max-height: 260px;
       object-fit: cover;
       display: block;
       border-radius: 8px;
+      cursor: zoom-in;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 15px rgba(255,255,255,0.4);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 32px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -108,7 +137,11 @@ Participants engaged in applied gait assessment, biomechanical interpretation, a
 </p>
 
   <p>
-As part of the hands-on experience, participants were introduced to a custom-developed <strong>gait analysis software platform</strong>, designed to support markerless motion analysis and clinical interpretation using modern computer vision techniques. The platform was demonstrated live and explored by students as a practical tool for translating movement data into clinically meaningful insights.
+As part of the hands-on experience, participants were introduced to a custom-developed
+<strong>gait analysis software platform developed by me</strong>, designed to support markerless
+motion analysis and clinical interpretation using modern computer vision techniques. The platform
+was demonstrated live and explored by students as a practical tool for translating movement data
+into clinically meaningful insights.
 </p>
 
   <p>
@@ -129,17 +162,41 @@ Initiatives like this reflect CIDERR’s mission to provide high-impact educatio
 
 <div class="col-media">
   <div class="media-block">
-    <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop session">
+    <a href="#img1" aria-label="Enlarge photo 1">
+      <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop session" loading="lazy">
+    </a>
   </div>
+
   <div class="media-block">
-    <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
+    <a href="#img2" aria-label="Enlarge photo 2">
+      <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training" loading="lazy">
+    </a>
   </div>
+
   <div class="media-block">
-    <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
+    <a href="#img3" aria-label="Enlarge photo 3">
+      <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education" loading="lazy">
+    </a>
   </div>
 </div>
 
 </div>
+</div>
+
+<!-- Lightbox overlays -->
+<div id="img1" class="lightbox">
+  <a href="#" class="lightbox-close" aria-label="Close">×</a>
+  <img src="gait_analysis_2_2.jpg" alt="Hands-on gait analysis workshop session">
+</div>
+
+<div id="img2" class="lightbox">
+  <a href="#" class="lightbox-close" aria-label="Close">×</a>
+  <img src="gait_analysis_4_2.jpg" alt="Clinical gait analysis practical training">
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#" class="lightbox-close" aria-label="Close">×</a>
+  <img src="git_analysis_3_2.jpg" alt="Interdisciplinary gait analysis education">
 </div>
 
 </div>
