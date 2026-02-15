@@ -9,6 +9,11 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 /* ---------- Container ---------- */
 .container {
     max-width: 920px;
@@ -184,6 +189,15 @@ article p {
     header h1 {
         font-size: 2em;
     }
+
+    .welcome-section {
+        padding: 30px 15px;
+    }
+
+    .welcome-card {
+        padding: 30px;
+        border-radius: 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -197,5 +211,9 @@ article p {
 
     article h3 {
         font-size: 1.1em;
+    }
+
+    .welcome-card {
+        padding: 20px;
     }
 }
