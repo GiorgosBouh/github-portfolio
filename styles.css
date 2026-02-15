@@ -1,51 +1,55 @@
-/* Base styling */
+/* ---------- Base ---------- */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
+    background: #f6f8fb;
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Container styling */
+/* ---------- Container ---------- */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    max-width: 920px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* Header styling */
+/* ---------- Header ---------- */
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     margin-bottom: 20px;
+    border: 4px solid #f3f4f6;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.4em;
-    color: #0073e6;
+    font-size: 2.6em;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: -0.5px;
 }
 
 header p {
-    margin: 5px 0;
-    color: #666;
+    margin: 8px 0;
+    color: #6b7280;
+    font-weight: 400;
 }
 
-/* Navigation styling */
+/* ---------- Navigation ---------- */
 nav {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -55,153 +59,143 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #ddd;
+    gap: 30px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 15px;
     flex-wrap: wrap;
 }
 
-nav ul li {
-    margin: 0;
-}
-
 nav ul li a {
-    color: #0073e6;
+    color: #374151;
     text-decoration: none;
-    padding: 15px 20px;
-    display: block;
-    font-weight: bold;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 6px 4px;
 }
 
 nav ul li a:hover {
-    background-color: #f0f0f0;
-    border-radius: 8px 8px 0 0;
+    color: #111827;
+    border-bottom: 2px solid #111827;
 }
 
-/* Section styling */
+/* ---------- Sections ---------- */
 section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 section h2 {
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    color: #0073e6;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    color: #111827;
+    font-weight: 600;
+    font-size: 1.6em;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
+/* ---------- Links ---------- */
 a {
-    color: #0073e6;
+    color: #2563eb;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #1e40af;
 }
 
+/* ---------- Articles ---------- */
 article {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 article h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-    color: #333;
+    margin: 0 0 8px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #111827;
 }
 
 article p em {
-    color: #999;
+    color: #9ca3af;
     font-size: 0.9em;
 }
 
 article p {
     margin: 10px 0;
+    color: #374151;
 }
 
-/* Responsive design */
+/* ---------- Welcome Section ---------- */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: #f9fafb;
+}
+
+.welcome-card {
+    background: #ffffff;
+    max-width: 900px;
+    padding: 50px;
+    border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+    line-height: 1.75;
+    color: #1f2937;
+}
+
+.welcome-card h2 {
+    font-size: 1.9rem;
+    color: #111827;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.intro-text,
+.research-text {
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+}
+
+.navigation-hint {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
-        margin: 20px auto;
+        padding: 30px;
+        margin: 30px 15px;
     }
 
     nav ul {
         flex-direction: column;
-    }
-
-    nav ul li a {
-        padding: 10px;
+        gap: 10px;
     }
 
     .profile-photo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     header h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
-    }
-
-    nav ul li a {
-        padding: 8px;
+        padding: 20px;
     }
 
     header p {
-        font-size: 0.9em;
+        font-size: 0.95em;
     }
 
     article h3 {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
-}
-.welcome-section {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
-    background-color: #eef3f8;
-}
-
-.welcome-card {
-    background-color: #fff;
-    max-width: 900px;
-    padding: 35px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: #2f2f2f;
-}
-
-.welcome-card h2 {
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.intro-text, .research-text {
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-}
-
-.navigation-hint {
-    font-size: 0.95rem;
-    color: #555;
-    font-style: italic;
 }
