@@ -9,6 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Prevent long emails/URLs from overflowing on mobile */
 a {
     overflow-wrap: anywhere;
     word-break: break-word;
@@ -171,9 +172,13 @@ article p {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
+    /* Make the main layout feel full-width on mobile */
     .container {
-        padding: 30px;
-        margin: 30px 15px;
+        max-width: 100%;
+        margin: 0;
+        padding: 25px 18px;
+        border-radius: 0;
+        box-shadow: none;
     }
 
     nav ul {
@@ -194,15 +199,19 @@ article p {
         padding: 30px 15px;
     }
 
+    /* Reduce padding/shadow so it doesn't feel like a narrow "card" on phone */
     .welcome-card {
-        padding: 30px;
-        border-radius: 14px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: none;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    /* Slightly tighter padding for very small screens */
     .container {
-        padding: 20px;
+        padding: 20px 16px;
     }
 
     header p {
@@ -214,6 +223,6 @@ article p {
     }
 
     .welcome-card {
-        padding: 20px;
+        padding: 18px;
     }
 }
