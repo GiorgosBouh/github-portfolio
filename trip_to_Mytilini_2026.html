@@ -17,7 +17,7 @@
   <meta property="og:image" content="https://giorgosbouh.github.io/github-portfolio/myt3.jpeg"/>
   <meta property="og:url" content="https://giorgosbouh.github.io/github-portfolio/trip_to_Mytilini_2026.html" />
   <meta property="og:type" content="website" />
-  <title>AI in Culture and Society: University of the Aegean</title>
+  <title>AI in Culture and Society | University of the Aegean</title>
   <link rel="stylesheet" href="styles.css" />
 
   <style>
@@ -61,10 +61,13 @@
 
     /* ---------- MODERN MEDIA GRID ---------- */
     .media-grid{
+      float: left;
+      width: min(38%, 300px);
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: 1fr;
       gap: 12px;
       align-items: center;
+      margin: 0 22px 14px 0;
     }
     .media-grid a{
       display: block;
@@ -82,6 +85,19 @@
     .media-grid img:hover{
       transform: scale(1.02);
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .col-text::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    @media (max-width: 700px){
+      .media-grid{
+        float: none;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        margin: 0 0 16px 0;
+      }
     }
 
     /* ---------- LIGHTBOX ---------- */
@@ -140,6 +156,16 @@
    <h2>AI in Culture and Society: University of the Aegean</h2>
    <p><strong>Mytilini, 28-29 May 2026</strong></p>
 
+  <div class="media-grid">
+    <a href="#img1" aria-label="Enlarge photo 1">
+      <img src="myt2.jpg" alt="AI in Culture and Society workshop in Mytilini" loading="lazy">
+    </a>
+
+    <a href="#img2" aria-label="Enlarge photo 2">
+      <img src="myt3.jpeg" alt="Postdoctoral research talk in Mytilini" loading="lazy">
+    </a>
+  </div>
+
  <p>
   The workshop <a href="https://i-lab.aegean.gr/aics-workshop/?fbclid=IwY2xjawSGqKdleHRuA2FlbQIxMABicmlkETFXelQ4VlRURGJMWmxQRWZVc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHgkUDZN5l81AK1xh0M0y1RFG7OxQAGGk80xLhdL2PmTbOTvUWM2hoVjpmaJ4_aem_zsMD38OscuyySwQ98TnNCA" target="_blank" rel="noopener noreferrer"><strong>“AI in Culture and Society”</strong></a>, held in Mytilini on
   28 May 2026, brought together perspectives on AI, culture, society, biomechanics,
@@ -165,18 +191,6 @@
   I would especially like to thank Prof. Konstantinos Kotis for his guidance, the excellent organisation of the
   workshop, and his generous hospitality.
 </p>
-</div>
-
-<div class="col-media">
-  <div class="media-grid">
-    <a href="#img1" aria-label="Enlarge photo 1">
-      <img src="myt2.jpg" alt="AI in Culture and Society workshop in Mytilini" loading="lazy">
-    </a>
-
-    <a href="#img2" aria-label="Enlarge photo 2">
-      <img src="myt3.jpeg" alt="Postdoctoral research talk in Mytilini" loading="lazy">
-    </a>
-  </div>
 </div>
 
 </div>
